@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  <url>
+    <loc>https://bsun0802.github.io/blog/notes-about-hadleys-advanced-r/</loc>
+    <lastmod>2018-08-02T15:20:21-07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://bsun0802.github.io/about/</loc>
+    <lastmod>2018-08-02T15:18:46-07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://bsun0802.github.io/blog/create-your-own-blog-with-hugo/</loc>
+    <lastmod>2018-07-29T08:12:13-07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://bsun0802.github.io/blog/</loc>
+    <lastmod>2018-08-02T15:20:21-07:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://bsun0802.github.io/</loc>
+    <lastmod>2018-08-02T15:20:21-07:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://bsun0802.github.io/categories/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://bsun0802.github.io/tags/deployment/</loc>
+    <lastmod>2018-07-29T08:12:13-07:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://bsun0802.github.io/categories/deployment/</loc>
+    <lastmod>2018-07-29T08:12:13-07:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://bsun0802.github.io/tags/hugo/</loc>
+    <lastmod>2018-07-29T08:12:13-07:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://bsun0802.github.io/categories/hugo/</loc>
+    <lastmod>2018-07-29T08:12:13-07:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://bsun0802.github.io/tags/personal-website/</loc>
+    <lastmod>2018-07-29T08:12:13-07:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://bsun0802.github.io/categories/personal-website/</loc>
+    <lastmod>2018-07-29T08:12:13-07:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://bsun0802.github.io/tags/</loc>
+    <lastmod>2018-07-29T08:12:13-07:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://bsun0802.github.io/tags/tags/</loc>
+    <lastmod>2018-08-02T15:20:21-07:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+</urlset>
