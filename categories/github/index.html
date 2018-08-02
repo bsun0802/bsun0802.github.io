@@ -13,9 +13,9 @@
 <meta property="og:site_name" content="Bo Sun&#39;s Blog - Vocabulary of R | Python Trics | 随想" />
 <meta property="og:locale" content="nn_NO" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://bsun0802.github.io/blog/create-your-own-blog-with-hugo/" />
-<meta property="og:title" content="Create your own blog with Hugo" />
-<meta property="twitter:title" content="Create your own blog with Hugo">
+<meta property="og:url" content="https://bsun0802.github.io/categories/github/" />
+<meta property="og:title" content="Github" />
+<meta property="twitter:title" content="Github">
 
     <meta property="og:image" content="https://bsun0802.github.io/img/banner.png">
     <meta property="twitter:card" content="summary">
@@ -27,10 +27,10 @@
 <title>
 
 
-     Bo Sun&#39;s Blog - Vocabulary of R | Python Trics | 随想 - Create your own blog with Hugo 
+     Bo Sun&#39;s Blog - Vocabulary of R | Python Trics | 随想 - Github 
 
 </title>
-<link rel="canonical" href="https://bsun0802.github.io/blog/create-your-own-blog-with-hugo/">
+<link rel="canonical" href="https://bsun0802.github.io/categories/github/">
 
 
 <style media="screen">
@@ -975,6 +975,8 @@ margin-left: -4%;
 
 
 
+  <link href="https://bsun0802.github.io/categories/github/index.xml" rel="alternate" type="application/rss+xml" title="Bo Sun&#39;s Blog - Vocabulary of R | Python Trics | 随想" />
+
 
 </head>
 
@@ -982,7 +984,7 @@ margin-left: -4%;
 <body>
 
 
-<div class="header column">
+<div class="header header-home column">
 
     <div class="container">
         
@@ -1011,158 +1013,24 @@ margin-left: -4%;
     </div>
 </div>
 
-
-
-
-
-<div class="main post non-narrow zero-top-spacing column">
+<div class="main column">
     <div class="container">
         <div class="content">
-            <div class="front-matter">
-                <div class="title-container">
-                    <div class="page-heading">
-
-    Create your own blog with Hugo
-
-</div>
-
-                </div>
-                <div class="meta">
-                    <div class="date" title="Sun Jul 29 2018 08:12:13 PDT">Jul 29, 2018</div>
+            <div class="posts">
+                <div class="page-heading">Posts about Github</div>
+                <ul>
                     
-                        
+                        <li class="post-item">
+    <span class="meta">Jul 30, 2018</span>
+    <a href="https://bsun0802.github.io/blog/deploy-your-hugo-sites-on-github-pages/"><span>Deploy your Hugo sites on Github Pages</span></a>
+</li>
+
                     
-                    <div class="reading-time middot">1 minute read</div>
-                    <div class="tags">
-                        <ul>
-                          
-                            <li class="middot"><a href="https://bsun0802.github.io/tags/hugo">Hugo</a> </li>
-                          
-                            <li class="middot"><a href="https://bsun0802.github.io/tags/deployment">deployment</a> </li>
-                          
-                            <li class="middot"><a href="https://bsun0802.github.io/tags/personal-website">personal-website</a> </li>
-                          
-                        </ul>
-                    </div>
-                    <div class="tags">
-                        <ul>
-                          
-                          
-                        </ul>
-                    </div>
-                </div>
+                </ul>
             </div>
-            <div class="markdown">
-                
-    
-    
-
-<p><a href="https://gohugo.io">Hugo</a> is a framework for building websites, technically speaking, building static pages. You could build your own website with the only prerequisite of some <a href="https://www.learnenough.com/command-line-tutorial">command line</a> and start writing immediately with <a href="https://www.rstudio.com/wp-content/uploads/2015/02/rmarkdown-cheatsheet.pdf">markdown</a>.</p>
-
-<h2 id="step-0-install-homebrew">Step 0. Install Homebrew</h2>
-
-<p>If you have a Mac but not using <a href="https://brew.sh">Homebrew</a>, you definitely have to try this package manager. And we will need it to install [Hugo][hugo] anyway. Hugo is the</p>
-
-<p>Use the following command to install Homebrew:</p>
-
-<pre><code>/usr/bin/ruby -e &quot;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)&quot;
-brew --version # check installation
-</code></pre>
-
-<h2 id="step-1">Step 1.</h2>
-
-<p>If you have installed Homebrew successfully, then you could have Hugo installed in one line:</p>
-
-<pre><code>&gt; brew install hugo
-&gt; hugo help # you are good to go!
-</code></pre>
-
-<p>If you are <strong>not</strong> using macOS, you need to check more complete instructions at <a href="https://gohugo.io/getting-started/installing/">Install Hugo</a>.</p>
-
-<h2 id="step-2-create-a-new-site">Step 2. Create a new site</h2>
-
-<pre><code>&gt; hugo new site /@path/your-new-site
-</code></pre>
-
-<p>The above will create a folder named <code>your-new-site</code> in your designated @path. And it will be the root of your newly created Hugo web application.</p>
-
-<h2 id="step-3-add-a-theme">Step 3. Add a theme</h2>
-
-<p>Being one of the most popular open-source framework for building websites, Hugo has a large and responsive community producing cool themes. Complete list of available themes can be found <a href="https://themes.gohugo.io">here</a>.</p>
-
-<p>From the root of you Hugo site:</p>
-
-<pre><code>&gt; # clone your favorite theme into `themes/@your-theme`:
-&gt; git clone https://github.com/@author/@your-theme.git themes/@your-theme
-
-&gt; # Generate site files into public directory
-&gt; hugo -t @your-theme
-</code></pre>
-
-<h2 id="step-4-start-writing">Step 4. Start writing</h2>
-
-<p>Congratulations, your first blog post is only one stone&rsquo;s throw from here!</p>
-
-<h3 id="creating-posts">Creating Posts</h3>
-
-<p>Posts should generally go under a <code>content/blog</code> directory. Simply run:</p>
-
-<pre><code>&gt; hugo new blog/your-new-post.md
-</code></pre>
-
-<p>the above will create <code>your-new-post.md</code> under <code>content/blog/</code>, as well as the <code>ontent/blog/</code> directory itself if not exist.</p>
-
-<p>For posts to appear on your site, you may need draft = false in the post’s front matter or use the &ndash;buildDrafts option when building.</p>
-
-<h3 id="creating-fixed-pages">Creating Fixed Pages</h3>
-
-<p>Fixed pages such as an About page should preferably go under <code>content/fixed</code> or be present at the root of the <code>content</code> directory(my preferable way).</p>
-
-<pre><code>&gt; hugo new about.md
-</code></pre>
-
-<p>The static pages you are going to build is genuinely text-based and the only tool you need to grab is the <a href="https://www.markdownguide.org">markdown makeup</a> language.</p>
-
-<h2 id="step-5-infinity-have-fun-playing-with-it">Step 5 - Infinity. Have fun playing with it.</h2>
-
-<p>The best approach to learn something is to play with it. Actually I build this site as a 2018 birthday gift to myself.</p>
-
-<p>Recommended starting point:</p>
-
-<ul>
-<li><a href="https://gohugo.io/documentation/">Hugo docs</a>.</li>
-<li><a href="http://www.gohugo.org/doc/tutorials/github-pages-blog/">Hugo 中文文档</a></li>
-<li><a href="https://blog.olowolo.com/post/hugo-quick-start/">Hugo 从入门到会用</a></li>
-</ul>
-
-
-                <br>
-            </div>
-            
-            
-                <div class="navigation">
-                    
-                    <div style="width: 100%;"></div>
-                    
-                    <div>
-                        <a href="https://bsun0802.github.io/blog/deploy-your-hugo-sites-on-github-pages/">Deploy your Hugo sites on Github Pages</a>
-                        <img class="icon" src="https://bsun0802.github.io/img/next.svg" alt="next" />
-                    </div>
-                    
-                </div>
-            
-            <br>
-            
-
-            
-
-            
         </div>
     </div>
 </div>
-
-
-
 <div class="footer column">
     <div class="container">
 

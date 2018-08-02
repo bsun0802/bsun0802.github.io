@@ -6,10 +6,21 @@
     <description>Recent content in Hugo on Bo Sun&#39;s Blog - Vocabulary of R | Python Trics | 随想</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
-    <lastBuildDate>Sun, 29 Jul 2018 08:12:13 -0700</lastBuildDate>
+    <lastBuildDate>Mon, 30 Jul 2018 15:34:13 -0700</lastBuildDate>
     
 	<atom:link href="https://bsun0802.github.io/categories/hugo/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Deploy your Hugo sites on Github Pages</title>
+      <link>https://bsun0802.github.io/blog/deploy-your-hugo-sites-on-github-pages/</link>
+      <pubDate>Mon, 30 Jul 2018 15:34:13 -0700</pubDate>
+      
+      <guid>https://bsun0802.github.io/blog/deploy-your-hugo-sites-on-github-pages/</guid>
+      <description>Acknowledgement: This post is a direct reproduction of whipperstacker&amp;rsquo;s blog.
+I found it extremely useful when it comes to deploy your Hugo sites on Github pages. It solves it perfectly!
+Let&amp;rsquo;s get Started! If you already know how to use Hugo, and you&amp;rsquo;ve never used GitHub Pages before, and you just want to figure out how to get everything wired up and deployed with the least amount of fuss necessary, then a lot of the blog posts and tutorials you&amp;rsquo;ll find are going to be a bit frustrating.</description>
+    </item>
     
     <item>
       <title>Create your own blog with Hugo</title>

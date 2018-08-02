@@ -13,9 +13,9 @@
 <meta property="og:site_name" content="Bo Sun&#39;s Blog - Vocabulary of R | Python Trics | 随想" />
 <meta property="og:locale" content="nn_NO" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://bsun0802.github.io/blog/create-your-own-blog-with-hugo/" />
-<meta property="og:title" content="Create your own blog with Hugo" />
-<meta property="twitter:title" content="Create your own blog with Hugo">
+<meta property="og:url" content="https://bsun0802.github.io/blog/deploy-your-hugo-sites-on-github-pages/" />
+<meta property="og:title" content="Deploy your Hugo sites on Github Pages" />
+<meta property="twitter:title" content="Deploy your Hugo sites on Github Pages">
 
     <meta property="og:image" content="https://bsun0802.github.io/img/banner.png">
     <meta property="twitter:card" content="summary">
@@ -27,10 +27,10 @@
 <title>
 
 
-     Bo Sun&#39;s Blog - Vocabulary of R | Python Trics | 随想 - Create your own blog with Hugo 
+     Bo Sun&#39;s Blog - Vocabulary of R | Python Trics | 随想 - Deploy your Hugo sites on Github Pages 
 
 </title>
-<link rel="canonical" href="https://bsun0802.github.io/blog/create-your-own-blog-with-hugo/">
+<link rel="canonical" href="https://bsun0802.github.io/blog/deploy-your-hugo-sites-on-github-pages/">
 
 
 <style media="screen">
@@ -1022,17 +1022,17 @@ margin-left: -4%;
                 <div class="title-container">
                     <div class="page-heading">
 
-    Create your own blog with Hugo
+    Deploy your Hugo sites on Github Pages
 
 </div>
 
                 </div>
                 <div class="meta">
-                    <div class="date" title="Sun Jul 29 2018 08:12:13 PDT">Jul 29, 2018</div>
+                    <div class="date" title="Mon Jul 30 2018 15:34:13 PDT">Jul 30, 2018</div>
                     
                         
                     
-                    <div class="reading-time middot">1 minute read</div>
+                    <div class="reading-time middot">4 minute read</div>
                     <div class="tags">
                         <ul>
                           
@@ -1041,6 +1041,8 @@ margin-left: -4%;
                             <li class="middot"><a href="https://bsun0802.github.io/tags/deployment">deployment</a> </li>
                           
                             <li class="middot"><a href="https://bsun0802.github.io/tags/personal-website">personal-website</a> </li>
+                          
+                            <li class="middot"><a href="https://bsun0802.github.io/tags/github">github</a> </li>
                           
                         </ul>
                     </div>
@@ -1057,83 +1059,149 @@ margin-left: -4%;
     
     
 
-<p><a href="https://gohugo.io">Hugo</a> is a framework for building websites, technically speaking, building static pages. You could build your own website with the only prerequisite of some <a href="https://www.learnenough.com/command-line-tutorial">command line</a> and start writing immediately with <a href="https://www.rstudio.com/wp-content/uploads/2015/02/rmarkdown-cheatsheet.pdf">markdown</a>.</p>
+<hr />
 
-<h2 id="step-0-install-homebrew">Step 0. Install Homebrew</h2>
+<p>Acknowledgement: This post is a direct reproduction of <a href="https://github.com/whipperstacker/blog">whipperstacker&rsquo;s blog</a>.</p>
 
-<p>If you have a Mac but not using <a href="https://brew.sh">Homebrew</a>, you definitely have to try this package manager. And we will need it to install [Hugo][hugo] anyway. Hugo is the</p>
+<p>I found it extremely useful when it comes to deploy your Hugo sites on Github pages. It solves it perfectly!</p>
 
-<p>Use the following command to install Homebrew:</p>
+<hr />
 
-<pre><code>/usr/bin/ruby -e &quot;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)&quot;
-brew --version # check installation
+<h2 id="let-s-get-started">Let&rsquo;s get Started!</h2>
+
+<p>If you already know how to use Hugo, and you&rsquo;ve never used GitHub Pages before, and
+you just want to figure out how to get everything wired up and deployed with the least
+amount of fuss necessary, then a lot of the blog posts and tutorials you&rsquo;ll find are
+going to be a bit frustrating.</p>
+
+<p>Some tutorials will explain the GitHub Pages part in detail, but will make assumptions
+about how you&rsquo;re generating your site, which won&rsquo;t necessarily match what Hugo does.</p>
+
+<p>Other tutorials will assume that you know <em>nothing</em>, and will explain every step of
+everything from scratch.</p>
+
+<p>This post assumes that you know what all the pieces are (hugo, repositories, a bit of DNS),
+and you just want to figure out the easiest way to stitch it all together.</p>
+
+<p>First, a warning:</p>
+
+<h2 id="don-t-make-a-gh-pages-branch">Don&rsquo;t Make a <code>gh-pages</code> Branch</h2>
+
+<p>A lot of the documentation you&rsquo;ll find will talk about creating a branch
+called <code>gh-pages</code> for the HTML. This is great if you&rsquo;re creating a portfolio
+site with sub-sites for different projects on GitHub.</p>
+
+<p>If you&rsquo;re looking to create a stand-alone site mapped to a custom domain,
+then that is not the documentation you need.</p>
+
+<p>The <code>gh-pages</code> branches are what GitHub refers to as <em>Project Pages</em>. What
+you need when creating a stand-alone site are <em>User Pages</em> or <em>Organization Pages</em>
+(which are the same thing, it just depends on if your GitHub user is a user
+or an organization).</p>
+
+<p>Ok, moving on.</p>
+
+<h2 id="a-tale-of-two-repositories">A Tale of Two Repositories</h2>
+
+<p>The trick to deploying a stand-alone, hugo-generated site that will be hosted
+on a custom domain is that everything within <code>public/</code> needs to be in its own
+repository, and that repository <em>must</em> be named <code>&lt;username&gt;.github.io</code>, where
+<code>&lt;username&gt;</code> is your actual GitHub username.</p>
+
+<p>This means that all the markdown and templates and configuration needs to go in
+a separate repository. The repository with all the Hugo stuff can be named
+whatever you like. For the sake of argument, let&rsquo;s assume this repository is called <code>blog</code>.</p>
+
+<p>The initial setup depends on what your current situation is. Most likely, either:</p>
+
+<ol>
+<li>nothing is committed to source control yet, or</li>
+<li>you already have your hugo site committed and pushed up to the <code>blog</code> repository
+on GitHub.</li>
+</ol>
+
+<h3 id="setup-when-nothing-is-committed">Setup When Nothing is Committed</h3>
+
+<p>Create two new, empty repositories on GitHub:</p>
+
+<ol>
+<li><code>blog</code></li>
+<li><code>&lt;username&gt;.github.io</code> Make sure to check the <em>Initialize this repository with a
+README</em> box, since that will make the next step easier.</li>
+</ol>
+
+<p>Kill your hugo server so that it stops regenerating the HTML.</p>
+
+<p>Delete the <code>public/</code> directory with <code>rm -r public/</code>.</p>
+
+<p>Initialize a git repository and add the remote:</p>
+
+<pre><code>$ git init
+$ git remote add origin git@github.com:&lt;username&gt;/blog.git
 </code></pre>
 
-<h2 id="step-1">Step 1.</h2>
+<h3 id="setup-when-you-ve-already-committed-and-pushed">Setup When You&rsquo;ve Already Committed and Pushed</h3>
 
-<p>If you have installed Homebrew successfully, then you could have Hugo installed in one line:</p>
+<p>If you&rsquo;ve already got your Hugo site committed to source control and pushed up to
+GitHub, then the process is similar, except that you need to make room for the submodule
+that you&rsquo;re going to add right after the setup is complete.</p>
 
-<pre><code>&gt; brew install hugo
-&gt; hugo help # you are good to go!
+<p>Kill your hugo server so that it stops regenerating the HTML.</p>
+
+<p>Create a new, empty repository named <code>&lt;username&gt;.github.io</code> on GitHub, making sure
+to tick the <em>Initialize this repository with a README</em> box.</p>
+
+<p>Delete the <code>public/</code> directory from git:</p>
+
+<pre><code>$ git rm -r public
 </code></pre>
 
-<p>If you are <strong>not</strong> using macOS, you need to check more complete instructions at <a href="https://gohugo.io/getting-started/installing/">Install Hugo</a>.</p>
+<h3 id="adding-the-submodule">Adding the Submodule</h3>
 
-<h2 id="step-2-create-a-new-site">Step 2. Create a new site</h2>
+<p>Clone the <code>&lt;username&gt;.github.io</code> repo into a submodule in <code>public</code>:</p>
 
-<pre><code>&gt; hugo new site /@path/your-new-site
+<pre><code>$ git submodule add git@github.com:&lt;username&gt;/&lt;username&gt;.github.io.git public
 </code></pre>
 
-<p>The above will create a folder named <code>your-new-site</code> in your designated @path. And it will be the root of your newly created Hugo web application.</p>
+<p>Add everything and push it up to GitHub:</p>
 
-<h2 id="step-3-add-a-theme">Step 3. Add a theme</h2>
-
-<p>Being one of the most popular open-source framework for building websites, Hugo has a large and responsive community producing cool themes. Complete list of available themes can be found <a href="https://themes.gohugo.io">here</a>.</p>
-
-<p>From the root of you Hugo site:</p>
-
-<pre><code>&gt; # clone your favorite theme into `themes/@your-theme`:
-&gt; git clone https://github.com/@author/@your-theme.git themes/@your-theme
-
-&gt; # Generate site files into public directory
-&gt; hugo -t @your-theme
+<pre><code>$ git add .
+$ git push -u origin master
 </code></pre>
 
-<h2 id="step-4-start-writing">Step 4. Start writing</h2>
+<h3 id="deploying">Deploying</h3>
 
-<p>Congratulations, your first blog post is only one stone&rsquo;s throw from here!</p>
+<p>Regenerate the HTML and push the submodule up to GitHub:</p>
 
-<h3 id="creating-posts">Creating Posts</h3>
-
-<p>Posts should generally go under a <code>content/blog</code> directory. Simply run:</p>
-
-<pre><code>&gt; hugo new blog/your-new-post.md
+<pre><code>$ hugo -t -theme=YOURTHEME
+$ cd public
+$ git add .
+$ git commit -m &quot;Generate site&quot;
+$ git push origin master
 </code></pre>
 
-<p>the above will create <code>your-new-post.md</code> under <code>content/blog/</code>, as well as the <code>ontent/blog/</code> directory itself if not exist.</p>
+<p>You should be able to see the index page up on <username>.github.io a few moments later.</p>
 
-<p>For posts to appear on your site, you may need draft = false in the post’s front matter or use the &ndash;buildDrafts option when building.</p>
+<p>Add a handy deploy script like <a href="https://github.com/spencerlyon2/hugo_gh_blog/blob/master/deploy.sh">Spencer Lyon&rsquo;s script</a> to simplify things a bit.</p>
 
-<h3 id="creating-fixed-pages">Creating Fixed Pages</h3>
+<h2 id="mapping-a-custom-domain">Mapping a Custom Domain</h2>
 
-<p>Fixed pages such as an About page should preferably go under <code>content/fixed</code> or be present at the root of the <code>content</code> directory(my preferable way).</p>
+<p>Whether you&rsquo;re going to use a subdomain like <code>blog.yoursite.com</code> or an apex domain like
+<code>yoursite.com</code>, you need to first add a file named CNAME to the submodule repository containing
+the domain you&rsquo;re mapping to.</p>
 
-<pre><code>&gt; hugo new about.md
-</code></pre>
+<p>Note that this file should be named <code>CNAME</code>, even if the DNS record you&rsquo;re creating is an A record
+or ALIAS record rather than a CNAME record.</p>
 
-<p>The static pages you are going to build is genuinely text-based and the only tool you need to grab is the <a href="https://www.markdownguide.org">markdown makeup</a> language.</p>
+<p>If you&rsquo;re mapping a subdomain, create a CNAME record with your DNS provider. For an apex domain
+you&rsquo;ll need either an ALIAS record on an A record. It depends on the provider.</p>
 
-<h2 id="step-5-infinity-have-fun-playing-with-it">Step 5 - Infinity. Have fun playing with it.</h2>
+<p>For more information about DNS mappings, check out the <a href="https://help.github.com/articles/setting-up-a-custom-domain-with-github-pages/">guide on GitHub</a>.</p>
 
-<p>The best approach to learn something is to play with it. Actually I build this site as a 2018 birthday gift to myself.</p>
+<h2 id="regenerating-all-the-urls">Regenerating All the URLS</h2>
 
-<p>Recommended starting point:</p>
-
-<ul>
-<li><a href="https://gohugo.io/documentation/">Hugo docs</a>.</li>
-<li><a href="http://www.gohugo.org/doc/tutorials/github-pages-blog/">Hugo 中文文档</a></li>
-<li><a href="https://blog.olowolo.com/post/hugo-quick-start/">Hugo 从入门到会用</a></li>
-</ul>
+<p>Once the DNS has propagated you&rsquo;re going to need to change the base host name in the Hugo config
+file, regenerate the site with the correct urls, and redeploy.</p>
 
 
                 <br>
@@ -1142,10 +1210,15 @@ brew --version # check installation
             
                 <div class="navigation">
                     
+                    <div>
+                        <img class="icon" src="https://bsun0802.github.io/img/back.svg" alt="back" />
+                        <a href="https://bsun0802.github.io/blog/create-your-own-blog-with-hugo/">Create your own blog with Hugo</a>
+                    </div>
+                    
                     <div style="width: 100%;"></div>
                     
                     <div>
-                        <a href="https://bsun0802.github.io/blog/deploy-your-hugo-sites-on-github-pages/">Deploy your Hugo sites on Github Pages</a>
+                        <a href="https://bsun0802.github.io/blog/notes-about-hadleys-advanced-r/">Notes about Hadley&#39;s Advanced R</a>
                         <img class="icon" src="https://bsun0802.github.io/img/next.svg" alt="next" />
                     </div>
                     

@@ -6,7 +6,7 @@
     <description>Recent content in Tags on Bo Sun&#39;s Blog - Vocabulary of R | Python Trics | 随想</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
-    <lastBuildDate>Sun, 29 Jul 2018 08:12:13 -0700</lastBuildDate>
+    <lastBuildDate>Mon, 30 Jul 2018 15:34:13 -0700</lastBuildDate>
     
 	<atom:link href="https://bsun0802.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
@@ -14,16 +14,25 @@
     <item>
       <title>Deployment</title>
       <link>https://bsun0802.github.io/tags/deployment/</link>
-      <pubDate>Sun, 29 Jul 2018 08:12:13 -0700</pubDate>
+      <pubDate>Mon, 30 Jul 2018 15:34:13 -0700</pubDate>
       
       <guid>https://bsun0802.github.io/tags/deployment/</guid>
       <description></description>
     </item>
     
     <item>
+      <title>Github</title>
+      <link>https://bsun0802.github.io/tags/github/</link>
+      <pubDate>Mon, 30 Jul 2018 15:34:13 -0700</pubDate>
+      
+      <guid>https://bsun0802.github.io/tags/github/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Hugo</title>
       <link>https://bsun0802.github.io/tags/hugo/</link>
-      <pubDate>Sun, 29 Jul 2018 08:12:13 -0700</pubDate>
+      <pubDate>Mon, 30 Jul 2018 15:34:13 -0700</pubDate>
       
       <guid>https://bsun0802.github.io/tags/hugo/</guid>
       <description></description>
@@ -32,7 +41,7 @@
     <item>
       <title>Personal Website</title>
       <link>https://bsun0802.github.io/tags/personal-website/</link>
-      <pubDate>Sun, 29 Jul 2018 08:12:13 -0700</pubDate>
+      <pubDate>Mon, 30 Jul 2018 15:34:13 -0700</pubDate>
       
       <guid>https://bsun0802.github.io/tags/personal-website/</guid>
       <description></description>
