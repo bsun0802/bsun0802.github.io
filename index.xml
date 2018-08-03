@@ -6,10 +6,21 @@
     <description>Recent content on Bo Sun&#39;s Blog - Vocabulary of R | Python Trics | 随想</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
-    <lastBuildDate>Thu, 02 Aug 2018 15:20:21 -0700</lastBuildDate>
+    <lastBuildDate>Thu, 02 Aug 2018 18:16:27 -0700</lastBuildDate>
     
 	<atom:link href="https://bsun0802.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>LICENSE</title>
+      <link>https://bsun0802.github.io/license/</link>
+      <pubDate>Thu, 02 Aug 2018 18:16:27 -0700</pubDate>
+      
+      <guid>https://bsun0802.github.io/license/</guid>
+      <description>The MIT License (MIT)
+Copyright &amp;copy; 2015 Nishanth Shanmughamnishanth.gerrard@gmail.com
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the &amp;ldquo;Software&amp;rdquo;), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:</description>
+    </item>
     
     <item>
       <title>Notes about Hadley&#39;s Advanced R</title>
@@ -17,7 +28,8 @@
       <pubDate>Thu, 02 Aug 2018 15:20:21 -0700</pubDate>
       
       <guid>https://bsun0802.github.io/blog/notes-about-hadleys-advanced-r/</guid>
-      <description></description>
+      <description>1+3  For twitter cards, see https://github.com/mtn/cocoa-eh-hugo-theme/wiki/Twitter-cards meta_img = &amp;ldquo;/images/image.jpg&amp;rdquo;
+For hacker news and lobsters builtin links, see github.com/mtn/cocoa-eh-hugo-theme/wiki/Social-Links hacker_news_id = &amp;ldquo;&amp;rdquo; lobsters_id = &amp;ldquo;&amp;rdquo; +++</description>
     </item>
     
     <item>

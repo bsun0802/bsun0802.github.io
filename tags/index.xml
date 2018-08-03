@@ -48,11 +48,20 @@
     </item>
     
     <item>
-      <title>Tags</title>
-      <link>https://bsun0802.github.io/tags/tags/</link>
+      <title>Programming</title>
+      <link>https://bsun0802.github.io/tags/programming/</link>
       <pubDate>Thu, 02 Aug 2018 15:20:21 -0700</pubDate>
       
-      <guid>https://bsun0802.github.io/tags/tags/</guid>
+      <guid>https://bsun0802.github.io/tags/programming/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>R</title>
+      <link>https://bsun0802.github.io/tags/r/</link>
+      <pubDate>Thu, 02 Aug 2018 15:20:21 -0700</pubDate>
+      
+      <guid>https://bsun0802.github.io/tags/r/</guid>
       <description></description>
     </item>
     
