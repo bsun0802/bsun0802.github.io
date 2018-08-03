@@ -1061,12 +1061,13 @@ margin-left: -4%;
 
 <h2 id="step-0-install-homebrew">Step 0. Install Homebrew</h2>
 
-<p>If you have a Mac but not using <a href="https://brew.sh">Homebrew</a>, you definitely have to try this package manager. And we will need it to install [Hugo][hugo] anyway. Hugo is the</p>
+<p>If you have a Mac but not using <a href="https://brew.sh">Homebrew</a>, you definitely have to try this package manager. And we will need it to install Hugo anyway.</p>
 
 <p>Use the following command to install Homebrew:</p>
 
-<pre><code>/usr/bin/ruby -e &quot;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)&quot;
-brew --version # check installation
+<pre><code>&gt; /usr/bin/ruby -e &quot;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)&quot;
+
+&gt; brew --version # check installation
 </code></pre>
 
 <h2 id="step-1">Step 1.</h2>
@@ -1076,6 +1077,8 @@ brew --version # check installation
 <pre><code>&gt; brew install hugo
 &gt; hugo help # you are good to go!
 </code></pre>
+
+<h1 id="for-users-of-other-os">For users of other OS</h1>
 
 <p>If you are <strong>not</strong> using macOS, you need to check more complete instructions at <a href="https://gohugo.io/getting-started/installing/">Install Hugo</a>.</p>
 
@@ -1092,12 +1095,18 @@ brew --version # check installation
 
 <p>From the root of you Hugo site:</p>
 
-<pre><code>&gt; # clone your favorite theme into `themes/@your-theme`:
-&gt; git clone https://github.com/@author/@your-theme.git themes/@your-theme
+<pre><code>&gt; cd @your-new-site
+&gt; git init
+&gt; # add as submodule your favorite theme into `themes/@your-theme`:
+&gt; git submodule add https://github.com/@author/@your-theme.git themes/@your-theme
+&gt; # example
+&gt; # git submodule add https://github.com/budparr/gohugo-theme-ananke.git themes/ananke
 
 &gt; # Generate site files into public directory
 &gt; hugo -t @your-theme
 </code></pre>
+
+<p>See also Hugo&rsquo;s <a href="https://blog.olowolo.com/post/hugo-quick-start/">Quick Start</a>.</p>
 
 <h2 id="step-4-start-writing">Step 4. Start writing</h2>
 
@@ -1110,9 +1119,12 @@ brew --version # check installation
 <pre><code>&gt; hugo new blog/your-new-post.md
 </code></pre>
 
-<p>the above will create <code>your-new-post.md</code> under <code>content/blog/</code>, as well as the <code>ontent/blog/</code> directory itself if not exist.</p>
+<p>the above will create <code>your-new-post.md</code> under <code>content/blog/</code>, as well as the <code>content/blog/</code> directory itself if not exist.</p>
 
-<p>For posts to appear on your site, you may need draft = false in the post’s front matter or use the &ndash;buildDrafts option when building.</p>
+<p>For posts to be displayed on your site, you could do one of the following:
+   * add <code>draft = false</code> in the post’s <a href="https://gohugo.io/content-management/front-matter/#readout">front matter</a>
+   * or use the <code>--buildDrafts</code> option when building
+   * or add <code>builddrafts = true</code> in <code>config.toml</code>.</p>
 
 <h3 id="creating-fixed-pages">Creating Fixed Pages</h3>
 
@@ -1121,7 +1133,7 @@ brew --version # check installation
 <pre><code>&gt; hugo new about.md
 </code></pre>
 
-<p>The static pages you are going to build is genuinely text-based and the only tool you need to grab is the <a href="https://www.markdownguide.org">markdown makeup</a> language.</p>
+<p>The static pages you are going to build is genuinely text-based and the only tool you need to grab is the <a href="https://www.markdownguide.org">markdown</a> makeup language.</p>
 
 <h2 id="step-5-infinity-have-fun-playing-with-it">Step 5 - Infinity. Have fun playing with it.</h2>
 

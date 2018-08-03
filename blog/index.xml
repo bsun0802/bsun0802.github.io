@@ -27,7 +27,7 @@
       
       <guid>https://bsun0802.github.io/blog/deploy-your-hugo-sites-on-github-pages/</guid>
       <description>Acknowledgement: This post is a direct reproduction of whipperstacker&amp;rsquo;s blog.
-I found it extremely useful when it comes to deploy your Hugo sites on Github pages. It solves it perfectly!
+I found it extremely useful when it comes to deploy your Hugo sites on Github pages. It nails it perfectly!
 Let&amp;rsquo;s get Started! If you already know how to use Hugo, and you&amp;rsquo;ve never used GitHub Pages before, and you just want to figure out how to get everything wired up and deployed with the least amount of fuss necessary, then a lot of the blog posts and tutorials you&amp;rsquo;ll find are going to be a bit frustrating.</description>
     </item>
     
@@ -37,7 +37,7 @@ Let&amp;rsquo;s get Started! If you already know how to use Hugo, and you&amp;rs
       <pubDate>Sun, 29 Jul 2018 08:12:13 -0700</pubDate>
       
       <guid>https://bsun0802.github.io/blog/create-your-own-blog-with-hugo/</guid>
-      <description>Hugo is a framework for building websites, technically speaking, building static pages. You could build your own website with the only prerequisite of some command line and start writing immediately with markdown. Step 0. Install Homebrew If you have a Mac but not using Homebrew, you definitely have to try this package manager. And we will need it to install [Hugo][hugo] anyway. Hugo is the Use the following command to</description>
+      <description>Hugo is a framework for building websites, technically speaking, building static pages. You could build your own website with the only prerequisite of some command line and start writing immediately with markdown. Step 0. Install Homebrew If you have a Mac but not using Homebrew, you definitely have to try this package manager. And we will need it to install Hugo anyway. Use the following command to install Homebrew: &amp;gt;</description>
     </item>
     
   </channel>
