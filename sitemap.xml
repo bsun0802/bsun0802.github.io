@@ -55,13 +55,13 @@
   </url>
   
   <url>
-    <loc>https://bsun0802.github.io/tags/deployment/</loc>
+    <loc>https://bsun0802.github.io/categories/deployment/</loc>
     <lastmod>2018-07-30T15:34:13-07:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://bsun0802.github.io/categories/deployment/</loc>
+    <loc>https://bsun0802.github.io/tags/deployment/</loc>
     <lastmod>2018-07-30T15:34:13-07:00</lastmod>
     <priority>0</priority>
   </url>
@@ -73,19 +73,13 @@
   </url>
   
   <url>
-    <loc>https://bsun0802.github.io/tags/github/</loc>
-    <lastmod>2018-07-30T15:34:13-07:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>https://bsun0802.github.io/categories/github/</loc>
     <lastmod>2018-07-30T15:34:13-07:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://bsun0802.github.io/tags/hugo/</loc>
+    <loc>https://bsun0802.github.io/tags/github/</loc>
     <lastmod>2018-07-30T15:34:13-07:00</lastmod>
     <priority>0</priority>
   </url>
@@ -97,7 +91,7 @@
   </url>
   
   <url>
-    <loc>https://bsun0802.github.io/tags/personal-website/</loc>
+    <loc>https://bsun0802.github.io/tags/hugo/</loc>
     <lastmod>2018-07-30T15:34:13-07:00</lastmod>
     <priority>0</priority>
   </url>
@@ -109,8 +103,8 @@
   </url>
   
   <url>
-    <loc>https://bsun0802.github.io/tags/programming/</loc>
-    <lastmod>2018-08-02T15:20:21-07:00</lastmod>
+    <loc>https://bsun0802.github.io/tags/personal-website/</loc>
+    <lastmod>2018-07-30T15:34:13-07:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -121,13 +115,19 @@
   </url>
   
   <url>
-    <loc>https://bsun0802.github.io/tags/r/</loc>
+    <loc>https://bsun0802.github.io/tags/programming/</loc>
     <lastmod>2018-08-02T15:20:21-07:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://bsun0802.github.io/categories/r/</loc>
+    <lastmod>2018-08-02T15:20:21-07:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://bsun0802.github.io/tags/r/</loc>
     <lastmod>2018-08-02T15:20:21-07:00</lastmod>
     <priority>0</priority>
   </url>

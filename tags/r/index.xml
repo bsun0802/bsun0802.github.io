@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>R on Bo Sun&#39;s Blog - Vocabulary of R | Python Trics | 随想</title>
+    <title>R on Bo Sun&#39;s Blog - Data Science · R · Python · More </title>
     <link>https://bsun0802.github.io/tags/r/</link>
-    <description>Recent content in R on Bo Sun&#39;s Blog - Vocabulary of R | Python Trics | 随想</description>
+    <description>Recent content in R on Bo Sun&#39;s Blog - Data Science · R · Python · More </description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
     <lastBuildDate>Thu, 02 Aug 2018 15:20:21 -0700</lastBuildDate>
