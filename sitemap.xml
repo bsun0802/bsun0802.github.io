@@ -3,6 +3,16 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://bsun0802.github.io/data-science/</loc>
+    <lastmod>2018-08-06T12:55:09-07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://bsun0802.github.io/blog/how-to-read-starrna-seq-aligner-log.final.out/</loc>
+    <lastmod>2018-08-06T11:29:33-07:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://bsun0802.github.io/license/</loc>
     <lastmod>2018-08-02T18:16:27-07:00</lastmod>
   </url>
@@ -29,13 +39,13 @@
   
   <url>
     <loc>https://bsun0802.github.io/blog/</loc>
-    <lastmod>2018-08-02T15:20:21-07:00</lastmod>
+    <lastmod>2018-08-06T11:29:33-07:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://bsun0802.github.io/</loc>
-    <lastmod>2018-08-02T18:16:27-07:00</lastmod>
+    <lastmod>2018-08-06T12:55:09-07:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -53,6 +63,12 @@
   <url>
     <loc>https://bsun0802.github.io/categories/deployment/</loc>
     <lastmod>2018-07-30T15:34:13-07:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://bsun0802.github.io/tags/genome/</loc>
+    <lastmod>2018-08-06T11:29:33-07:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -113,6 +129,12 @@
   <url>
     <loc>https://bsun0802.github.io/categories/r/</loc>
     <lastmod>2018-08-02T15:20:21-07:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://bsun0802.github.io/tags/rna-seq/</loc>
+    <lastmod>2018-08-06T11:29:33-07:00</lastmod>
     <priority>0</priority>
   </url>
   
