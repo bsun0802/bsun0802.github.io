@@ -1045,7 +1045,7 @@ margin-left: -4%;
                     
                         
                     
-                    <div class="reading-time middot">4 minute read</div>
+                    <div class="reading-time middot">5 minute read</div>
                     <div class="tags">
                         <ul>
                           
@@ -1196,6 +1196,36 @@ $ git push origin master
 <p>You should be able to see the index page up on <username>.github.io a few moments later.</p>
 
 <p>Add a handy deploy script like <a href="https://github.com/spencerlyon2/hugo_gh_blog/blob/master/deploy.sh">Spencer Lyon&rsquo;s script</a> to simplify things a bit.</p>
+
+<h3 id="make-the-whole-deploying-procedure-a-shell-script">Make the whole deploying-procedure a shell script</h3>
+
+<pre><code>#!/bin/bash
+
+echo -e &quot;\033[0;32mDeploying updates to GitHub...\033[0m&quot;
+
+# Build the project.
+hugo -t cocoa-eh # if using a theme, replace with `hugo -t &lt;YOURTHEME&gt;`
+
+# Go To Public folder
+cd public
+# Add changes to git.
+git add .
+
+# Commit changes.
+msg=&quot;rebuilding site `date`&quot;
+if [ $# -eq 1 ]
+  then msg=&quot;$1&quot;
+fi
+git commit -m &quot;$msg&quot;
+
+# Push source and build repos.
+git push origin master
+
+# Come Back up to the Project Root
+cd ..
+</code></pre>
+
+<p>Save the above content to a file like <code>deploy.sh</code>. And when you build your site to remote site, call <code>sh deploy.sh</code> and <code>git push origin master</code> if you also want to commit the changes of your site source files.</p>
 
 <h2 id="mapping-a-custom-domain">Mapping a Custom Domain</h2>
 
