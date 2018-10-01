@@ -6,10 +6,19 @@
     <description>Recent content in Github on Bo Sun&#39;s Blog - Data Science · R · Python · More </description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
-    <lastBuildDate>Mon, 30 Jul 2018 15:34:13 -0700</lastBuildDate>
+    <lastBuildDate>Wed, 26 Sep 2018 17:37:23 -0700</lastBuildDate>
     
 	<atom:link href="https://bsun0802.github.io/tags/github/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Git/Bash command you will need</title>
+      <link>https://bsun0802.github.io/blog/git/bash-command-you-will-need/</link>
+      <pubDate>Wed, 26 Sep 2018 17:37:23 -0700</pubDate>
+      
+      <guid>https://bsun0802.github.io/blog/git/bash-command-you-will-need/</guid>
+      <description>1.Useful git commands Account settings git config --global user.name &amp;quot;Max Spatz&amp;quot; git config --global user.email &amp;quot;max@example.com&amp;quot;  This is useful especially when you first start using git/Github, you might be asked to set your account details for you to start commit to your projects. use --global to configure for all projects. Otherwise you can run git config without --global inside a project directory to configure for a specific project.</description>
+    </item>
     
     <item>
       <title>Deploy your Hugo sites on Github Pages</title>

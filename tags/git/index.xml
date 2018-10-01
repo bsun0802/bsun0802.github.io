@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Programming on Bo Sun&#39;s Blog - Data Science · R · Python · More </title>
-    <link>https://bsun0802.github.io/tags/programming/</link>
-    <description>Recent content in Programming on Bo Sun&#39;s Blog - Data Science · R · Python · More </description>
+    <title>Git on Bo Sun&#39;s Blog - Data Science · R · Python · More </title>
+    <link>https://bsun0802.github.io/tags/git/</link>
+    <description>Recent content in Git on Bo Sun&#39;s Blog - Data Science · R · Python · More </description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
     <lastBuildDate>Wed, 26 Sep 2018 17:37:23 -0700</lastBuildDate>
     
-	<atom:link href="https://bsun0802.github.io/tags/programming/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://bsun0802.github.io/tags/git/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
