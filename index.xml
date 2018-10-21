@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Bo Sun&#39;s Blog - Data Science · R · Python · More </title>
+    <title>Bo&#39;s lightweight blog - Tips | Tutorial | Random thought</title>
     <link>https://bsun0802.github.io/</link>
-    <description>Recent content on Bo Sun&#39;s Blog - Data Science · R · Python · More </description>
+    <description>Recent content on Bo&#39;s lightweight blog - Tips | Tutorial | Random thought</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
     <lastBuildDate>Wed, 26 Sep 2018 17:37:23 -0700</lastBuildDate>
@@ -26,7 +26,8 @@
       <pubDate>Mon, 06 Aug 2018 12:55:09 -0700</pubDate>
       
       <guid>https://bsun0802.github.io/data-science/</guid>
-      <description>In order to facilitate the use of R markdown to actually run and display the output of code chunks, I host my data science posts in my another site.</description>
+      <description>This blog site is designed for quick tutorial &amp;amp; tips.
+For my full featured data science post&amp;amp;project, please refers to my full site and search for tags(e.g., R, data science, etc), where R markdown is supported and I could show some code chunks and the result of actually running them.</description>
     </item>
     
     <item>
