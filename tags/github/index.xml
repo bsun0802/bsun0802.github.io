@@ -26,9 +26,9 @@
       <pubDate>Mon, 30 Jul 2018 15:34:13 -0700</pubDate>
       
       <guid>https://bsun0802.github.io/blog/deploy-your-hugo-sites-on-github-pages/</guid>
-      <description>Acknowledgement: This post is a direct reproduction of whipperstacker&amp;rsquo;s blog.
-I found it extremely useful when it comes to deploy your Hugo sites on Github pages. It nails it perfectly!
-Let&amp;rsquo;s get Started! If you already know how to use Hugo, and you&amp;rsquo;ve never used GitHub Pages before, and you just want to figure out how to get everything wired up and deployed with the least amount of fuss necessary, then a lot of the blog posts and tutorials you&amp;rsquo;ll find are going to be a bit frustrating.</description>
+      <description>Deploy on Netlify steps Deploy your HUGO website on Netlify is astonishingly easy, if you are a beginner, it is recommended to use this approach.
+Netlify is free and provides fast global access, automated deployment when you add or modify content, and one-click HTTPS security. Netlify free account will create a non-sense domain for your website, to deploy, simply:
+ Create a Netlify account create a repository on Github(Netlify also support other providers)for you finished website Log-in Netlify and then click New site from git and follow click-and-confirm instructions from Netlify Wait a couple minutes, and you are good to go.</description>
     </item>
     
   </channel>
