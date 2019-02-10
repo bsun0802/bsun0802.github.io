@@ -6,10 +6,21 @@
     <description>Recent content in Blog on Bo&#39;s lightweight blog - Tips | Tutorial | Random thought</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
-    <lastBuildDate>Wed, 26 Sep 2018 17:37:23 -0700</lastBuildDate>
+    <lastBuildDate>Sat, 09 Feb 2019 18:07:18 -0800</lastBuildDate>
     
 	<atom:link href="https://bsun0802.github.io/blog/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>How to correctly apply Batch Normalization layer in TensorFlow（the pitfall of UPDATE_OPS)</title>
+      <link>https://bsun0802.github.io/blog/how-to-correctly-apply-batch-normalization-layer-in-tensorflowthe-pitfall-of-update_ops/</link>
+      <pubDate>Sat, 09 Feb 2019 18:07:18 -0800</pubDate>
+      
+      <guid>https://bsun0802.github.io/blog/how-to-correctly-apply-batch-normalization-layer-in-tensorflowthe-pitfall-of-update_ops/</guid>
+      <description>Batch Normalization layer in TensorFlow In this post, I&amp;rsquo;m not going to explain the math behind what batch normalization does and why it could help if we apply batch-normalization in our deep networks.
+For a quick look of what batch normalization is, check this post.
+For a deeper understanding of batch normalization, you can look up in the paper &amp;ldquo;Batch Normalization: Accelerating Deep Network Training by Reducing Internal Covariate Shift&amp;rdquo; by Ioeffe and Szegedy (2015).</description>
+    </item>
     
     <item>
       <title>Git/Bash command you will need</title>

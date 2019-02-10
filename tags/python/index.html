@@ -13,9 +13,9 @@
 <meta property="og:site_name" content="Bo&#39;s lightweight blog - Tips | Tutorial | Random thought" />
 <meta property="og:locale" content="nn_NO" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://bsun0802.github.io/blog/git/bash-command-you-will-need/" />
-<meta property="og:title" content="Git/Bash command you will need" />
-<meta property="twitter:title" content="Git/Bash command you will need">
+<meta property="og:url" content="https://bsun0802.github.io/tags/python/" />
+<meta property="og:title" content="Python" />
+<meta property="twitter:title" content="Python">
 
     <meta property="og:image" content="https://bsun0802.github.io/img/banner.png">
     <meta property="twitter:card" content="summary">
@@ -27,10 +27,10 @@
 <title>
 
 
-     Bo&#39;s lightweight blog - Tips | Tutorial | Random thought - Git/Bash command you will need 
+     Bo&#39;s lightweight blog - Tips | Tutorial | Random thought - Python 
 
 </title>
-<link rel="canonical" href="https://bsun0802.github.io/blog/git/bash-command-you-will-need/">
+<link rel="canonical" href="https://bsun0802.github.io/tags/python/">
 
 
 <style media="screen">
@@ -975,6 +975,8 @@ margin-left: -4%;
 
 
 
+  <link href="https://bsun0802.github.io/tags/python/index.xml" rel="alternate" type="application/rss+xml" title="Bo&#39;s lightweight blog - Tips | Tutorial | Random thought" />
+
 
 </head>
 
@@ -982,7 +984,7 @@ margin-left: -4%;
 <body>
 
 
-<div class="header column">
+<div class="header header-home column">
 
     <div class="container">
         
@@ -1024,290 +1026,24 @@ margin-left: -4%;
     </div>
 </div>
 
-
-
-
-
-<div class="main post non-narrow zero-top-spacing column">
+<div class="main column">
     <div class="container">
         <div class="content">
-            <div class="front-matter">
-                <div class="title-container">
-                    <div class="page-heading">
-
-    Git/Bash command you will need
-
-</div>
-
-                </div>
-                <div class="meta">
-                    <div class="date" title="Wed Sep 26 2018 17:37:23 PDT">Sep 26, 2018</div>
+            <div class="posts">
+                <div class="page-heading">Posts about Python</div>
+                <ul>
                     
-                        
+                        <li class="post-item">
+    <span class="meta">Feb 9, 2019</span>
+    <a href="https://bsun0802.github.io/blog/how-to-correctly-apply-batch-normalization-layer-in-tensorflowthe-pitfall-of-update_ops/"><span>How to correctly apply Batch Normalization layer in TensorFlow（the pitfall of UPDATE_OPS)</span></a>
+</li>
+
                     
-                    <div class="reading-time middot">3 minute read</div>
-                    <div class="tags">
-                        <ul>
-                          
-                            <li class="middot"><a href="https://bsun0802.github.io/tags/programming">programming</a> </li>
-                          
-                            <li class="middot"><a href="https://bsun0802.github.io/tags/git">git</a> </li>
-                          
-                            <li class="middot"><a href="https://bsun0802.github.io/tags/github">github</a> </li>
-                          
-                        </ul>
-                    </div>
-                    <div class="tags">
-                        <ul>
-                          
-                          
-                        </ul>
-                    </div>
-                </div>
+                </ul>
             </div>
-            <div class="markdown">
-                
-    
-    
-
-<hr />
-
-<h1 id="1-useful-git-commands">1.Useful git commands</h1>
-
-<hr />
-
-<h2 id="account-settings">Account settings</h2>
-
-<pre><code>git config --global user.name &quot;Max Spatz&quot;
-git config --global user.email &quot;max@example.com&quot;
-</code></pre>
-
-<p>This is useful especially when you first start using git/Github, you might be asked to set your account details for you to start commit to your projects. use <code>--global</code> to configure for all projects. Otherwise you can run <code>git config</code> without <code>--global</code> inside a project directory to configure for a specific project.</p>
-
-<h2 id="check-your-settings-detail">Check your settings detail</h2>
-
-<pre><code>git config --list
-</code></pre>
-
-<p>list all your settings.</p>
-
-<h2 id="initialize-a-git-repository-for-existing-project">Initialize a git repository for existing project</h2>
-
-<pre><code>cd example-project/
-git init
-</code></pre>
-
-<p><code>git init</code> create a <code>.git</code> directory and make your project a &ldquo;Git repository&rdquo;.</p>
-
-<h2 id="clone-a-remote-repository">Clone a remote repository</h2>
-
-<pre><code>git clone https://github.com/username/repository.git
-</code></pre>
-
-<p>This will create a directory with the same name of the repository, however you can clone the content of a remote repository in a directory you specified:</p>
-
-<pre><code>git clone https://github.com/username/repository.git .
-</code></pre>
-
-<p>clone the repository content in current directory.</p>
-
-<h2 id="update-and-merge-your-current-branch-with-a-remote">Update and merge your current branch with a remote</h2>
-
-<pre><code>cd repository/
-git pull origin master
-</code></pre>
-
-<p>Where <code>origin</code> is the remote repository, and master the remote branch.
-If you don&rsquo;t want to <strong>merge</strong> your changes, use <code>git fetch</code></p>
-
-<h2 id="get-help-on-a-git-command">get help on a git command</h2>
-
-<pre><code>git help fetch
-</code></pre>
-
-<h2 id="view-remote">View remote</h2>
-
-<pre><code>git remote -v
-</code></pre>
-
-<p>Must be run within a git repository.</p>
-
-<h2 id="add-remote">Add remote</h2>
-
-<pre><code>git remote add remote-name https://github.com/user/repo.git
-</code></pre>
-
-<p>And then you can start push to the remote.</p>
-
-<h2 id="change-remote-origin">Change remote origin</h2>
-
-<pre><code>git remote set-url origin http//github.com/repo.git
-</code></pre>
-
-<h2 id="see-non-staged-non-added-changes-to-existing-files">See non-staged (non-added) changes to existing files</h2>
-
-<pre><code>git diff
-</code></pre>
-
-<h2 id="see-difference-between-a-local-branch-and-a-remote-branch">See difference between a local branch and a remote branch</h2>
-
-<pre><code>git fetch origin master  # make sure you get the updated origin/master branch
-git diff origin/master --[local-path]
-</code></pre>
-
-<p>You can omit <code>--local-path</code> if you are in the current directory.</p>
-
-<h2 id="see-difference-between-two-commits">see difference between two commits</h2>
-
-<pre><code>git diff COMMIT1_ID COMMIT2_ID
-</code></pre>
-
-<h2 id="see-diff-before-push">See diff before push</h2>
-
-<pre><code>git diff --cached origin/master
-</code></pre>
-
-<p>It&rsquo;s never too safe to check before you committing a change.</p>
-
-<h2 id="add-change-and-commit-perhaps-with-a-message">Add change and commit, perhaps with a message</h2>
-
-<pre><code>git add changed_file.txt
-git add folder-with-changed-files/
-git add -A  # add all changes
-git commit -m &quot;Commiting changes&quot; # provide a message through -m
-</code></pre>
-
-<h2 id="move-and-create-branch">Move and create branch</h2>
-
-<pre><code>git checkout master  # use checkout to switch branch
-git checkout -b new-branch-name  # create new branch
-</code></pre>
-
-<h2 id="merge-branch-commits">Merge branch commits</h2>
-
-<p>git checkout master
-git merge branch-name</p>
-
-<p>Merge branch-name to master.</p>
-
-<h2 id="and-there-is-a-thing-called">And there is a thing called</h2>
-
-<p><a href="https://mirrors.edge.kernel.org/pub/software/scm/git/docs/git-grep.html"><em>git</em> grep</a></p>
-
-<h2 id="acknowledgement">Acknowledgement</h2>
-
-<p>Inspired by this <a href="https://orga.cat/posts/most-useful-git-commands">post</a></p>
-
-<hr />
-
-<h1 id="2-useful-linux-commands">2.Useful linux commands</h1>
-
-<hr />
-
-<h2 id="wget-download-with-infinite-re-try-runs-in-backend">wget download with infinite re-try runs in backend</h2>
-
-<pre><code>wget -c --retry-connrefused --tries=0 -O path-to-output file-url &amp;
-</code></pre>
-
-<h2 id="do-not-delete-the-compressed-files-after-unzip">do not delete the compressed files after unzip</h2>
-
-<pre><code>gunzip -clk
-</code></pre>
-
-<h2 id="search-a-regex-pattern-e-in-files-under-a-directory">search a regex pattern(-e) in files under a directory</h2>
-
-<pre><code>grep -rnw dirName -e 'regex'
-</code></pre>
-
-<h2 id="show-total-size-of-a-directory">show total size of a directory</h2>
-
-<pre><code>du -sbh dirName
-</code></pre>
-
-<h2 id="find-file-by-name">find file by name</h2>
-
-<pre><code>find . -name &quot;foo*”
-</code></pre>
-
-<h2 id="compare-files-line-by-line-report-when-identical-output-difference">compare files line by line, report when identical, output difference</h2>
-
-<pre><code>diff -s file1 fil2
-</code></pre>
-
-<h1 id="show-directory-tree">show directory tree</h1>
-
-<pre><code>brew install tree
-tree /path/to/display
-</code></pre>
-
-<h1 id="change-tabs-to-spaces">Change tabs to spaces</h1>
-
-<pre><code>expand  # see help pages for more detailed usage
-</code></pre>
-
-<h1 id="usage-of-pass-output-to-other-command">usage of &lt;(), pass output to other command</h1>
-
-<pre><code>paste positive.rev.txt &lt;(yes &quot;pos&quot; | head -2198) &gt; pos.tagged
-</code></pre>
-
-<p><code>yes</code> will keep on print the string &ldquo;pos&rdquo; and we want 2198 lines, because the positive.rev.txt has the same line number. And paste will combine this two column-wise.</p>
-
-
-                <br>
-            </div>
-            
-            
-                <div class="navigation">
-                    
-                    <div>
-                        <img class="icon" src="https://bsun0802.github.io/img/back.svg" alt="back" />
-                        <a href="https://bsun0802.github.io/blog/how-to-read-starrna-seq-aligner-log.final.out/">How to Read Star(RNA-seq aligner) Log.final.out</a>
-                    </div>
-                    
-                    <div style="width: 100%;"></div>
-                    
-                    <div>
-                        <a href="https://bsun0802.github.io/blog/how-to-correctly-apply-batch-normalization-layer-in-tensorflowthe-pitfall-of-update_ops/">How to correctly apply Batch Normalization layer in TensorFlow（the pitfall of UPDATE_OPS)</a>
-                        <img class="icon" src="https://bsun0802.github.io/img/next.svg" alt="next" />
-                    </div>
-                    
-                </div>
-            
-            <br>
-            
-            <div class="disqus">
-                <div id="disqus_thread"></div>
-<script type="application/javascript">
-    var disqus_config = function () {
-    
-    
-    
-    };
-    (function() {
-        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
-            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
-            return;
-        }
-        var d = document, s = d.createElement('script'); s.async = true;
-        s.src = '//' + "techalch" + '.disqus.com/embed.js';
-        s.setAttribute('data-timestamp', +new Date());
-        (d.head || d.body).appendChild(s);
-    })();
-</script>
-<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
-            </div>
-            
-
-            
-
-            
         </div>
     </div>
 </div>
-
-
-
 <div class="footer column">
     <div class="container">
 
