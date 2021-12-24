@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>deep-learning on Bo Sun | Facebook AI</title>
-    <link>https://bsun0802.github.io/tags/deep-learning/</link>
-    <description>Recent content in deep-learning on Bo Sun | Facebook AI</description>
+    <title>tensor-flow on Bo Sun | Facebook AI</title>
+    <link>https://bsun0802.github.io/tags/tensor-flow/</link>
+    <description>Recent content in tensor-flow on Bo Sun | Facebook AI</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 12 May 2018 16:11:56 -0700</lastBuildDate><atom:link href="https://bsun0802.github.io/tags/deep-learning/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 12 May 2018 16:11:56 -0700</lastBuildDate><atom:link href="https://bsun0802.github.io/tags/tensor-flow/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>How to correctly apply Batch Normalization layer in TensorFlow（the pitfall of UPDATE_OPS)</title>
       <link>https://bsun0802.github.io/blog/blog3/</link>

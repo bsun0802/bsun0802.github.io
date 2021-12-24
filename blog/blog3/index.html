@@ -17,7 +17,7 @@
     
     
 
-    <title>Bo Sun | Facebook AI | 5 Best Ways To Sell ML</title>
+    <title>Bo Sun | Facebook AI | How to correctly apply Batch Normalization layer in TensorFlow（the pitfall of UPDATE_OPS)</title>
 
 
     
@@ -39,12 +39,12 @@
 
 
 <h3>
-    <a class="title" href="/blog/blog3/">5 Best Ways To Sell ML</a>
+    <a class="title" href="/blog/blog3/">How to correctly apply Batch Normalization layer in TensorFlow（the pitfall of UPDATE_OPS)</a>
 </h3>
 
 <div class="reading_time secondary_font text-muted ">
     <span>
-        May 12 2020 · 4 min read
+        May 12 2018 · 2 min read
     </span>
 
 </div>
@@ -54,16 +54,16 @@
 
 <div class="tags_navigation">
     
-    <a class="tag" href="/tags/ml/">#ml</a>
+    <a class="tag" href="/tags/deep-learning/">#deep-learning</a>
     
     <a class="tag" href="/tags/ai/">#ai</a>
     
-    <a class="tag" href="/tags/startups/">#startups</a>
+    <a class="tag" href="/tags/tensor-flow/">#tensor-flow</a>
     
 </div>
 
 
-<p>Pellentesque dapibus nec velit sit amet venenatis. Nam mauris elit, feugiat vitae massa a, scelerisque pretium justo. Aliquam eu quam suscipit, gravida dolor auctor, porttitor risus. Integer at dui blandit, scelerisque nunc vel, gravida neque. Vivamus at nisi lacinia, bibendum ipsum a, dignissim nibh. Ut urna eros, consequat ut tristique id, egestas non lectus. Cras placerat condimentum orci, et cursus tortor tempus in. Aenean sodales leo sed scelerisque molestie. Duis tempus lectus sed velit fermentum, quis auctor dolor mattis. Donec ipsum risus, luctus eget justo facilisis, egestas cursus arcu. Curabitur et nibh lectus. Cras a dignissim nisi.</p>
+<p><strong>Caution: this post is written in 2018 and maybe out-of-date!</strong></p>
 <div class="toc ">
     <div>
         <strong>Table of Contents</strong>
@@ -72,39 +72,35 @@
         
         <nav id="TableOfContents">
   <ul>
-    <li><a href="#header-i">Header <code>I</code></a>
+    <li>
       <ul>
-        <li><a href="#header-2">Header 2</a>
-          <ul>
-            <li><a href="#header-3">Header 3</a></li>
-            <li><a href="#header-4">Header 4</a></li>
-          </ul>
-        </li>
+        <li><a href="#batch-normalization-layer-in-tensorflow">Batch Normalization layer in TensorFlow</a></li>
+        <li><a href="#how-to-apply-batch-normalization-in-tensorflow">How to apply batch-normalization in TensorFlow</a></li>
+        <li><a href="#the-pitfall-update_ops">The pitfall: UPDATE_OPS</a></li>
       </ul>
     </li>
-    <li><a href="#header-ii">Header <code>II</code></a></li>
   </ul>
 </nav>
     </div>
 </div>
-<h1 id="header-i">Header <code>I</code></h1>
-<p>Nulla <code>fermentum blandit metus</code> sit amet congue. Nunc hendrerit eleifend magna, quis posuere nulla eleifend eget. Pellentesque quis nulla eu massa facilisis sodales in quis urna. Vestibulum aliquam metus id risus volutpat iaculis. Sed malesuada nunc cursus risus consectetur suscipit. Quisque sit amet leo mattis, sagittis purus eu, tristique sapien. Vestibulum gravida dictum aliquam. Etiam magna neque, tempus et aliquet sed, sollicitudin sed tellus. Sed euismod, lorem eget aliquet ultrices, nisl eros hendrerit nunc, in gravida augue leo id diam. Integer sed nisi laoreet, pretium turpis eu, tincidunt tellus. Sed at auctor est, eu consequat urna.</p>
-<h2 id="header-2">Header 2</h2>
-<p>Nulla fermentum blandit metus sit amet congue. Nunc hendrerit eleifend magna, quis posuere nulla eleifend eget. Pellentesque quis nulla eu massa facilisis sodales in quis urna. Vestibulum aliquam metus id risus volutpat iaculis. Sed malesuada nunc cursus risus consectetur suscipit. Quisque sit amet leo mattis, sagittis purus eu, tristique sapien. Vestibulum gravida dictum aliquam. Etiam magna neque, tempus et aliquet sed, sollicitudin sed tellus. Sed euismod, lorem eget aliquet ultrices, nisl eros hendrerit nunc, in gravida augue leo id diam. Integer sed nisi laoreet, pretium turpis eu, tincidunt tellus. Sed at auctor est, eu consequat urna.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
+<h2 id="batch-normalization-layer-in-tensorflow">Batch Normalization layer in TensorFlow</h2>
+<p>In this post, I&rsquo;m not going to explain the math behind what batch normalization does and why it could help if we apply batch-normalization in our deep networks.</p>
+<p>For a quick look of what batch normalization is, check this <a href="https://towardsdatascience.com/batch-normalization-theory-and-how-to-use-it-with-tensorflow-1892ca0173ad">post</a>.</p>
+<p>For a deeper understanding of batch normalization, you can look up in the paper &ldquo;Batch Normalization: Accelerating Deep Network Training by Reducing Internal Covariate Shift&rdquo; by <a href="https://arxiv.org/abs/1502.03167">Ioeffe and Szegedy (2015)</a>.</p>
+<h2 id="how-to-apply-batch-normalization-in-tensorflow">How to apply batch-normalization in TensorFlow</h2>
+<p>Thanks to the tensor flow API, we could apply batch-normalization as easy as we implement any other layers(eg. relu, dropout, etc). We simply call <a href="https://www.tensorflow.org/api_docs/python/tf/layers/batch_normalization"><code>tf.layers.batch_normalization</code></a> to create a batch-normalization layer. And as it is clearly noted that: make sure that <code>training</code> parameter is correctly set. We could declare a boolean placeholder to make sure that during training <code>training</code> is set to <code>True</code>, and when evaluating <code>training</code> is set to <code>False</code>. Because when inference(validation), we do not calculate the statistics(moving mean and moving variance) from validation data, instead we applied those calculated in the current training batch.</p>
+<h2 id="the-pitfall-update_ops">The pitfall: UPDATE_OPS</h2>
+<p>You might be confused that, after applying the batch-normalization layer, your network performs properly in training, maybe even achieve higher training accuracy, but the validation accuracy drops significantly for no reason.</p>
+<p>This is because in TensorFlow, the moving mean and moving variance need to be updated manually. It is clearly stated in a blue box in the documentation here<a href="https://www.tensorflow.org/api_docs/python/tf/layers/batch_normalization"><code>tf.layers.batch_normalization</code></a>. But it is common for beginners to overlook those because the ease and homogeneity of applying other layers in TensorFlow.</p>
+<p>So when define <code>train_op</code> if you used batch-normalization, you need to create the dependency of <code>UPDATE_OPS</code> on your <code>train_op</code> like following:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">  x_norm <span style="color:#f92672">=</span> tf<span style="color:#f92672">.</span>layers<span style="color:#f92672">.</span>batch_normalization(x, training<span style="color:#f92672">=</span>training)
+  
+  <span style="color:#75715e"># ...</span>
 
-<span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
-    println(<span style="color:#e6db74">&#34;Hello, World!&#34;</span>)
-}
-
-</code></pre></div><h3 id="header-3">Header 3</h3>
-<p>Nulla fermentum blandit metus sit amet congue. Nunc hendrerit eleifend magna, quis posuere nulla eleifend eget. Pellentesque quis nulla eu massa facilisis sodales in quis urna. Vestibulum aliquam metus id risus volutpat iaculis. Sed malesuada nunc cursus risus consectetur suscipit. Quisque sit amet leo mattis, sagittis purus eu, tristique sapien. Vestibulum gravida dictum aliquam. Etiam magna neque, tempus et aliquet sed, sollicitudin sed tellus. Sed euismod, lorem eget aliquet ultrices, nisl eros hendrerit nunc, in gravida augue leo id diam. Integer sed nisi laoreet, pretium turpis eu, tincidunt tellus. Sed at auctor est, eu consequat urna.</p>
-<h3 id="header-4">Header 4</h3>
-<p>Nulla <code>fermentum blandit metus</code> sit amet congue. Nunc hendrerit eleifend magna, quis posuere nulla eleifend eget. Pellentesque quis nulla eu massa facilisis sodales in quis urna. Vestibulum aliquam metus id risus volutpat iaculis. Sed malesuada nunc cursus risus consectetur suscipit. Quisque sit amet leo mattis, sagittis purus eu, tristique sapien. Vestibulum gravida dictum aliquam. Etiam magna neque, tempus et aliquet sed, sollicitudin sed tellus. Sed euismod, lorem eget aliquet ultrices, nisl eros hendrerit nunc, in gravida augue leo id diam. Integer sed nisi laoreet, pretium turpis eu, tincidunt tellus. Sed at auctor est, eu consequat urna.</p>
-<p>Nulla <code>fermentum blandit metus</code> sit amet congue. Nunc hendrerit eleifend magna, quis posuere nulla eleifend eget. Pellentesque quis nulla eu massa facilisis sodales in quis urna. Vestibulum aliquam metus id risus volutpat iaculis. Sed malesuada nunc cursus risus consectetur suscipit. Quisque sit amet leo mattis, sagittis purus eu, tristique sapien. Vestibulum gravida dictum aliquam. Etiam magna neque, tempus et aliquet sed, sollicitudin sed tellus. Sed euismod, lorem eget aliquet ultrices, nisl eros hendrerit nunc, in gravida augue leo id diam. Integer sed nisi laoreet, pretium turpis eu, tincidunt tellus. Sed at auctor est, eu consequat urna.</p>
-<h1 id="header-ii">Header <code>II</code></h1>
-<p>Nulla fermentum blandit metus sit amet congue. Nunc hendrerit eleifend magna, quis posuere nulla eleifend eget. Pellentesque quis nulla eu massa facilisis sodales in quis urna. Vestibulum aliquam metus id risus volutpat iaculis. Sed malesuada nunc cursus risus consectetur suscipit. Quisque sit amet leo mattis, sagittis purus eu, tristique sapien. Vestibulum gravida dictum aliquam. Etiam magna neque, tempus et aliquet sed, sollicitudin sed tellus. Sed euismod, lorem eget aliquet ultrices, nisl eros hendrerit nunc, in gravida augue leo id diam. Integer sed nisi laoreet, pretium turpis eu, tincidunt tellus. Sed at auctor est, eu consequat urna.</p>
-
+  update_ops <span style="color:#f92672">=</span> tf<span style="color:#f92672">.</span>get_collection(tf<span style="color:#f92672">.</span>GraphKeys<span style="color:#f92672">.</span>UPDATE_OPS)
+  <span style="color:#66d9ef">with</span> tf<span style="color:#f92672">.</span>control_dependencies(update_ops):
+    train_op <span style="color:#f92672">=</span> optimizer<span style="color:#f92672">.</span>minimize(loss)
+</code></pre></div>
 
 <footer class="mt-auto d-flex justify-content-center text-muted small secondary_font">
     <span class="text-muted">Copyright (c) 2021, Bo Sun,

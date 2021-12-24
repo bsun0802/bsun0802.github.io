@@ -17,7 +17,7 @@
     
     
 
-    <title>Bo Sun | Facebook AI | Picture Your ML On Top. Read This And Make It So</title>
+    <title>Bo Sun | Facebook AI | Deploy your Hugo sites on Github Pages</title>
 
 
     
@@ -39,12 +39,12 @@
 
 
 <h3>
-    <a class="title" href="/blog/blog4/">Picture Your ML On Top. Read This And Make It So</a>
+    <a class="title" href="/blog/blog4/">Deploy your Hugo sites on Github Pages</a>
 </h3>
 
 <div class="reading_time secondary_font text-muted ">
     <span>
-        Jan 11 2021 · 4 min read
+        Jan 11 2021 · 6 min read
     </span>
 
 </div>
@@ -54,16 +54,13 @@
 
 <div class="tags_navigation">
     
-    <a class="tag" href="/tags/deep_learning/">#deep_learning</a>
+    <a class="tag" href="/tags/hugo/">#hugo</a>
     
-    <a class="tag" href="/tags/neural_networks/">#neural_networks</a>
-    
-    <a class="tag" href="/tags/ai/">#ai</a>
+    <a class="tag" href="/tags/github/">#github</a>
     
 </div>
 
 
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla eget dui justo. Sed bibendum sollicitudin neque, et iaculis ligula dapibus eget. Etiam faucibus augue non posuere blandit. Phasellus ex ex, ultricies quis eleifend vel, imperdiet a felis. Sed ipsum velit, ullamcorper nec lacus fermentum, ullamcorper sagittis libero. Pellentesque hendrerit quam eget nunc ullamcorper mattis. Etiam sed nisi ac ipsum semper interdum. Nunc vulputate vitae nibh vitae convallis. Cras in ante arcu. Aliquam tincidunt rhoncus lorem, at porta nibh vehicula ut. Aenean laoreet, nibh in ullamcorper luctus, purus neque sollicitudin velit, vitae euismod odio orci quis erat. Nam cursus lorem et velit pulvinar, sagittis blandit odio cursus. Ut non bibendum ligula. Nam interdum, augue sed commodo mollis, est ante luctus ipsum, in convallis sapien velit ac libero. Fusce vitae ante ac leo commodo semper a id justo.</p>
 <div class="toc ">
     <div>
         <strong>Table of Contents</strong>
@@ -72,38 +69,162 @@
         
         <nav id="TableOfContents">
   <ul>
-    <li><a href="#header-i">Header <code>I</code></a>
+    <li><a href="#i-deploy-on-netlify"><code>I</code> Deploy on Netlify</a>
       <ul>
-        <li><a href="#header-2">Header 2</a>
-          <ul>
-            <li><a href="#header-3">Header 3</a></li>
-            <li><a href="#header-4">Header 4</a></li>
-          </ul>
-        </li>
+        <li><a href="#steps">Steps</a></li>
       </ul>
     </li>
-    <li><a href="#header-ii">Header <code>II</code></a></li>
+    <li><a href="#ii-deploy-on-github-pages"><code>II</code> Deploy on GitHub Pages</a>
+      <ul>
+        <li><a href="#lets-get-started">Let&rsquo;s get Started!</a></li>
+        <li><a href="#dont-make-a-gh-pages-branch">Don&rsquo;t Make a <code>gh-pages</code> Branch</a></li>
+        <li><a href="#a-tale-of-two-repositories">A Tale of Two Repositories</a>
+          <ul>
+            <li><a href="#1-setup-when-nothing-is-committedselect-one-of-this-two">1. Setup When Nothing is Committed(select one of this two)</a></li>
+            <li><a href="#2-setup-when-youve-already-committed-and-pushedselect-one-of-this-two">2. Setup When You&rsquo;ve Already Committed and Pushed(select one of this two)</a></li>
+            <li><a href="#adding-the-submodule">Adding the Submodule</a></li>
+            <li><a href="#deploying">Deploying</a></li>
+            <li><a href="#make-the-whole-deploying-procedure-a-shell-script">Make the whole deploying-procedure a shell script</a></li>
+          </ul>
+        </li>
+        <li><a href="#mapping-a-custom-domain">Mapping a Custom Domain</a></li>
+        <li><a href="#regenerating-all-the-urls">Regenerating All the URLS</a></li>
+      </ul>
+    </li>
   </ul>
 </nav>
     </div>
 </div>
-<h1 id="header-i">Header <code>I</code></h1>
-<p>Nulla <code>fermentum blandit metus</code> sit amet congue. Nunc hendrerit eleifend magna, quis posuere nulla eleifend eget. Pellentesque quis nulla eu massa facilisis sodales in quis urna. Vestibulum aliquam metus id risus volutpat iaculis. Sed malesuada nunc cursus risus consectetur suscipit. Quisque sit amet leo mattis, sagittis purus eu, tristique sapien. Vestibulum gravida dictum aliquam. Etiam magna neque, tempus et aliquet sed, sollicitudin sed tellus. Sed euismod, lorem eget aliquet ultrices, nisl eros hendrerit nunc, in gravida augue leo id diam. Integer sed nisi laoreet, pretium turpis eu, tincidunt tellus. Sed at auctor est, eu consequat urna.</p>
-<h2 id="header-2">Header 2</h2>
-<p>Nulla fermentum blandit metus sit amet congue. Nunc hendrerit eleifend magna, quis posuere nulla eleifend eget. Pellentesque quis nulla eu massa facilisis sodales in quis urna. Vestibulum aliquam metus id risus volutpat iaculis. Sed malesuada nunc cursus risus consectetur suscipit. Quisque sit amet leo mattis, sagittis purus eu, tristique sapien. Vestibulum gravida dictum aliquam. Etiam magna neque, tempus et aliquet sed, sollicitudin sed tellus. Sed euismod, lorem eget aliquet ultrices, nisl eros hendrerit nunc, in gravida augue leo id diam. Integer sed nisi laoreet, pretium turpis eu, tincidunt tellus. Sed at auctor est, eu consequat urna.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
+<h1 id="i-deploy-on-netlify"><code>I</code> Deploy on Netlify</h1>
+<h2 id="steps">Steps</h2>
+<p>Deploy your HUGO website on Netlify is astonishingly easy, if you are a beginner, it is recommended to use this approach.</p>
+<p>Netlify is free and provides fast global access, automated deployment when you add or modify content, and one-click HTTPS security. Netlify free account will create a non-sense domain for your website, to deploy, simply:</p>
+<ul>
+<li>Create a <a href="https://www.netlify.com">Netlify account</a></li>
+<li>create a repository on Github(Netlify also support other providers)for you finished website</li>
+<li>Log-in Netlify and then click <strong>New site from git</strong> and follow click-and-confirm instructions from Netlify</li>
+<li>Wait a couple minutes, and you are good to go.</li>
+</ul>
+<h1 id="ii-deploy-on-github-pages"><code>II</code> Deploy on GitHub Pages</h1>
+<p>Acknowledgement: This post is a direct reproduction of <a href="https://github.com/whipperstacker/blog">whipperstacker&rsquo;s blog</a>.</p>
+<p>I found it extremely useful when it comes to deploy your Hugo sites on Github pages. It nails it perfectly!</p>
+<hr>
+<h2 id="lets-get-started">Let&rsquo;s get Started!</h2>
+<p>If you already know how to use Hugo, and you&rsquo;ve never used GitHub Pages before, and
+you just want to figure out how to get everything wired up and deployed with the least
+amount of fuss necessary, then a lot of the blog posts and tutorials you&rsquo;ll find are
+going to be a bit frustrating.</p>
+<p>Some tutorials will explain the GitHub Pages part in detail, but will make assumptions
+about how you&rsquo;re generating your site, which won&rsquo;t necessarily match what Hugo does.</p>
+<p>Other tutorials will assume that you know <em>nothing</em>, and will explain every step of
+everything from scratch.</p>
+<p>This post assumes that you know what all the pieces are (hugo, repositories, a bit of DNS),
+and you just want to figure out the easiest way to stitch it all together.</p>
+<p>First, a warning:</p>
+<h2 id="dont-make-a-gh-pages-branch">Don&rsquo;t Make a <code>gh-pages</code> Branch</h2>
+<p>A lot of the documentation you&rsquo;ll find will talk about creating a branch
+called <code>gh-pages</code> for the HTML. This is great if you&rsquo;re creating a portfolio
+site with sub-sites for different projects on GitHub.</p>
+<p>If you&rsquo;re looking to create a stand-alone site mapped to a custom domain,
+then that is not the documentation you need.</p>
+<p>The <code>gh-pages</code> branches are what GitHub refers to as <em>Project Pages</em>. What
+you need when creating a stand-alone site are <em>User Pages</em> or <em>Organization Pages</em>
+(which are the same thing, it just depends on if your GitHub user is a user
+or an organization).</p>
+<p>Ok, moving on.</p>
+<h2 id="a-tale-of-two-repositories">A Tale of Two Repositories</h2>
+<p>The trick to deploying a stand-alone, hugo-generated site that will be hosted
+on a custom domain is that everything within <code>public/</code> needs to be in its own
+repository, and that repository <em>must</em> be named <code>&lt;username&gt;.github.io</code>, where
+<code>&lt;username&gt;</code> is your actual GitHub username.</p>
+<p>This means that all the markdown and templates and configuration needs to go in
+a separate repository. The repository with all the Hugo stuff can be named
+whatever you like. For the sake of argument, let&rsquo;s assume this repository is called <code>blog</code>.</p>
+<p>The initial setup depends on what your current situation is. Most likely, either:</p>
+<ol>
+<li>nothing is committed to source control yet, or</li>
+<li>you already have your hugo site committed and pushed up to the <code>blog</code> repository
+on GitHub.</li>
+</ol>
+<h3 id="1-setup-when-nothing-is-committedselect-one-of-this-two">1. Setup When Nothing is Committed(select one of this two)</h3>
+<p>Create two new, empty repositories on GitHub:</p>
+<ol>
+<li><code>blog</code></li>
+<li><code>&lt;username&gt;.github.io</code> Make sure to check the <em>Initialize this repository with a
+README</em> box, since that will make the next step easier.</li>
+</ol>
+<p>Kill your hugo server so that it stops regenerating the HTML.</p>
+<p>Delete the <code>public/</code> directory with <code>rm -r public/</code>.</p>
+<p>Initialize a git repository and add the remote:</p>
+<pre><code>$ git init
+$ git remote add origin https://github.com/&lt;user.name&gt;/&lt;user.name&gt;.github.io.git
+</code></pre>
+<h3 id="2-setup-when-youve-already-committed-and-pushedselect-one-of-this-two">2. Setup When You&rsquo;ve Already Committed and Pushed(select one of this two)</h3>
+<p>If you&rsquo;ve already got your Hugo site committed to source control and pushed up to
+GitHub, then the process is similar, except that you need to make room for the submodule
+that you&rsquo;re going to add right after the setup is complete.</p>
+<p>Kill your hugo server so that it stops regenerating the HTML.</p>
+<p>Create a new, empty repository named <code>&lt;username&gt;.github.io</code> on GitHub, making sure
+to tick the <em>Initialize this repository with a README</em> box.</p>
+<p>Delete the <code>public/</code> directory from git:</p>
+<pre><code>$ git rm -r public
+</code></pre>
+<h3 id="adding-the-submodule">Adding the Submodule</h3>
+<p>Clone the <code>&lt;username&gt;.github.io</code> repo into a submodule in <code>public</code>:</p>
+<pre><code>$ git submodule add git@github.com:&lt;username&gt;/&lt;username&gt;.github.io.git public
+</code></pre>
+<p>Add everything and push it up to GitHub:</p>
+<pre><code>$ git add .
+$ git push -u origin master
+</code></pre>
+<h3 id="deploying">Deploying</h3>
+<p>Regenerate the HTML and push the submodule up to GitHub:</p>
+<pre><code>$ hugo -t -theme=YOURTHEME
+$ cd public
+$ git add .
+$ git commit -m &quot;Generate site&quot;
+$ git push origin master
+</code></pre>
+<p>You should be able to see the index page up on <!-- raw HTML omitted -->.github.io a few moments later.</p>
+<p>Add a handy deploy script like <a href="https://github.com/spencerlyon2/hugo_gh_blog/blob/master/deploy.sh">Spencer Lyon&rsquo;s script</a> to simplify things a bit.</p>
+<h3 id="make-the-whole-deploying-procedure-a-shell-script">Make the whole deploying-procedure a shell script</h3>
+<pre tabindex="0"><code>#!/bin/bash
 
-<span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
-    println(<span style="color:#e6db74">&#34;Hello, World!&#34;</span>)
-}
+echo -e &quot;\033[0;32mDeploying updates to GitHub...\033[0m&quot;
 
-</code></pre></div><h3 id="header-3">Header 3</h3>
-<p>Nulla fermentum blandit metus sit amet congue. Nunc hendrerit eleifend magna, quis posuere nulla eleifend eget. Pellentesque quis nulla eu massa facilisis sodales in quis urna. Vestibulum aliquam metus id risus volutpat iaculis. Sed malesuada nunc cursus risus consectetur suscipit. Quisque sit amet leo mattis, sagittis purus eu, tristique sapien. Vestibulum gravida dictum aliquam. Etiam magna neque, tempus et aliquet sed, sollicitudin sed tellus. Sed euismod, lorem eget aliquet ultrices, nisl eros hendrerit nunc, in gravida augue leo id diam. Integer sed nisi laoreet, pretium turpis eu, tincidunt tellus. Sed at auctor est, eu consequat urna.</p>
-<h3 id="header-4">Header 4</h3>
-<p>Nulla <code>fermentum blandit metus</code> sit amet congue. Nunc hendrerit eleifend magna, quis posuere nulla eleifend eget. Pellentesque quis nulla eu massa facilisis sodales in quis urna. Vestibulum aliquam metus id risus volutpat iaculis. Sed malesuada nunc cursus risus consectetur suscipit. Quisque sit amet leo mattis, sagittis purus eu, tristique sapien. Vestibulum gravida dictum aliquam. Etiam magna neque, tempus et aliquet sed, sollicitudin sed tellus. Sed euismod, lorem eget aliquet ultrices, nisl eros hendrerit nunc, in gravida augue leo id diam. Integer sed nisi laoreet, pretium turpis eu, tincidunt tellus. Sed at auctor est, eu consequat urna.</p>
-<p>Nulla <code>fermentum blandit metus</code> sit amet congue. Nunc hendrerit eleifend magna, quis posuere nulla eleifend eget. Pellentesque quis nulla eu massa facilisis sodales in quis urna. Vestibulum aliquam metus id risus volutpat iaculis. Sed malesuada nunc cursus risus consectetur suscipit. Quisque sit amet leo mattis, sagittis purus eu, tristique sapien. Vestibulum gravida dictum aliquam. Etiam magna neque, tempus et aliquet sed, sollicitudin sed tellus. Sed euismod, lorem eget aliquet ultrices, nisl eros hendrerit nunc, in gravida augue leo id diam. Integer sed nisi laoreet, pretium turpis eu, tincidunt tellus. Sed at auctor est, eu consequat urna.</p>
-<h1 id="header-ii">Header <code>II</code></h1>
-<p>Nulla fermentum blandit metus sit amet congue. Nunc hendrerit eleifend magna, quis posuere nulla eleifend eget. Pellentesque quis nulla eu massa facilisis sodales in quis urna. Vestibulum aliquam metus id risus volutpat iaculis. Sed malesuada nunc cursus risus consectetur suscipit. Quisque sit amet leo mattis, sagittis purus eu, tristique sapien. Vestibulum gravida dictum aliquam. Etiam magna neque, tempus et aliquet sed, sollicitudin sed tellus. Sed euismod, lorem eget aliquet ultrices, nisl eros hendrerit nunc, in gravida augue leo id diam. Integer sed nisi laoreet, pretium turpis eu, tincidunt tellus. Sed at auctor est, eu consequat urna.</p>
+# Build the project.
+hugo -t cocoa-eh # if using a theme, replace with `hugo -t &lt;YOURTHEME&gt;`
+
+# Go To Public folder
+cd public
+# Add changes to git.
+git add .
+
+# Commit changes.
+msg=&quot;rebuilding site `date`&quot;
+if [ $# -eq 1 ]
+  then msg=&quot;$1&quot;
+fi
+git commit -m &quot;$msg&quot;
+
+# Push source and build repos.
+git push origin master
+
+# Come Back up to the Project Root
+cd ..
+</code></pre><p>Save the above content to a file like <code>deploy.sh</code>. And when you build your site to remote site, call <code>sh deploy.sh</code> and git add, commit and push if you also want to commit the changes of your site source files.</p>
+<h2 id="mapping-a-custom-domain">Mapping a Custom Domain</h2>
+<p>Whether you&rsquo;re going to use a subdomain like <code>blog.yoursite.com</code> or an apex domain like
+<code>yoursite.com</code>, you need to first add a file named CNAME to the submodule repository containing
+the domain you&rsquo;re mapping to.</p>
+<p>Note that this file should be named <code>CNAME</code>, even if the DNS record you&rsquo;re creating is an A record
+or ALIAS record rather than a CNAME record.</p>
+<p>If you&rsquo;re mapping a subdomain, create a CNAME record with your DNS provider. For an apex domain
+you&rsquo;ll need either an ALIAS record on an A record. It depends on the provider.</p>
+<p>For more information about DNS mappings, check out the <a href="https://help.github.com/articles/setting-up-a-custom-domain-with-github-pages/">guide on GitHub</a>.</p>
+<h2 id="regenerating-all-the-urls">Regenerating All the URLS</h2>
+<p>Once the DNS has propagated you&rsquo;re going to need to change the base host name in the Hugo config
+file, regenerate the site with the correct urls, and redeploy.</p>
 
 
 <footer class="mt-auto d-flex justify-content-center text-muted small secondary_font">

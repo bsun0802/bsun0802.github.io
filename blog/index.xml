@@ -8,39 +8,42 @@
     <language>en-us</language>
     <lastBuildDate>Mon, 11 Jan 2021 16:12:29 -0700</lastBuildDate><atom:link href="https://bsun0802.github.io/blog/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Picture Your ML On Top. Read This And Make It So</title>
+      <title>Deploy your Hugo sites on Github Pages</title>
       <link>https://bsun0802.github.io/blog/blog4/</link>
       <pubDate>Mon, 11 Jan 2021 16:12:29 -0700</pubDate>
       
       <guid>https://bsun0802.github.io/blog/blog4/</guid>
-      <description>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla eget dui justo. Sed bibendum sollicitudin neque, et iaculis ligula dapibus eget. Etiam faucibus augue non posuere blandit. Phasellus ex ex, ultricies quis eleifend vel, imperdiet a felis. Sed ipsum velit, ullamcorper nec lacus fermentum, ullamcorper sagittis libero. Pellentesque hendrerit quam eget nunc ullamcorper mattis. Etiam sed nisi ac ipsum semper interdum. Nunc vulputate vitae nibh vitae convallis. Cras in ante arcu.</description>
+      <description>Table of Contents    I Deploy on Netlify  Steps   II Deploy on GitHub Pages  Let&amp;rsquo;s get Started! Don&amp;rsquo;t Make a gh-pages Branch A Tale of Two Repositories  1. Setup When Nothing is Committed(select one of this two) 2. Setup When You&amp;rsquo;ve Already Committed and Pushed(select one of this two) Adding the Submodule Deploying Make the whole deploying-procedure a shell script   Mapping a Custom Domain Regenerating All the URLS       I Deploy on Netlify Steps Deploy your HUGO website on Netlify is astonishingly easy, if you are a beginner, it is recommended to use this approach.</description>
     </item>
     
     <item>
-      <title>5 Best Ways To Sell ML</title>
-      <link>https://bsun0802.github.io/blog/blog3/</link>
-      <pubDate>Tue, 12 May 2020 16:11:56 -0700</pubDate>
+      <title>Create your own blog with Hugo in 5 minutes</title>
+      <link>https://bsun0802.github.io/blog/blog1/</link>
+      <pubDate>Mon, 18 May 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://bsun0802.github.io/blog/blog3/</guid>
-      <description>Pellentesque dapibus nec velit sit amet venenatis. Nam mauris elit, feugiat vitae massa a, scelerisque pretium justo. Aliquam eu quam suscipit, gravida dolor auctor, porttitor risus. Integer at dui blandit, scelerisque nunc vel, gravida neque. Vivamus at nisi lacinia, bibendum ipsum a, dignissim nibh. Ut urna eros, consequat ut tristique id, egestas non lectus. Cras placerat condimentum orci, et cursus tortor tempus in. Aenean sodales leo sed scelerisque molestie. Duis tempus lectus sed velit fermentum, quis auctor dolor mattis.</description>
+      <guid>https://bsun0802.github.io/blog/blog1/</guid>
+      <description>Disclaimer: This blog was written in 2020, so Hugo may have changed. So you better cross-reference newer resources as well.
+ Table of Contents    Step 0. Install Homebrew Step 1. Install Hugo Step 2. Create a new site Step 3. Choose a theme Step 4. Start writing         Step 5 Deploy your web with GitHub Pages.  References:       Hugo is a framework for building websites, technically speaking, building static pages.</description>
     </item>
     
     <item>
-      <title>7 Ways To Keep Your ML Growing Without Burning The Midnight Oil</title>
+      <title>How to Read STAR (RNA-seq aligner) output</title>
       <link>https://bsun0802.github.io/blog/blog2/</link>
       <pubDate>Fri, 07 Jun 2019 16:04:19 -0700</pubDate>
       
       <guid>https://bsun0802.github.io/blog/blog2/</guid>
-      <description>Nulla fermentum blandit metus sit amet congue. Nunc hendrerit eleifend magna, quis posuere nulla eleifend eget. Pellentesque quis nulla eu massa facilisis sodales in quis urna. Vestibulum aliquam metus id risus volutpat iaculis. Sed malesuada nunc cursus risus consectetur suscipit. Quisque sit amet leo mattis, sagittis purus eu, tristique sapien. Vestibulum gravida dictum aliquam. Etiam magna neque, tempus et aliquet sed, sollicitudin sed tellus. Sed euismod, lorem eget aliquet ultrices, nisl eros hendrerit nunc, in gravida augue leo id diam.</description>
+      <description>In this post, I&amp;rsquo;m gonna show you how to read the Log.final.out from RNA-seq aligner STAR.
+ Table of Contents      Background Goal of this post Log.final.out Break it down Wrap up       Background For most of beginner Bioinformaticians, students, including myself back then, tend to apply those reads mappers blindly and head into the downstream analysis. Basically run with the default parameters, and care less about:</description>
     </item>
     
     <item>
-      <title>Secrets To ML – Even In This Down Economy</title>
-      <link>https://bsun0802.github.io/blog/blog1/</link>
-      <pubDate>Fri, 18 May 2018 00:00:00 +0000</pubDate>
+      <title>How to correctly apply Batch Normalization layer in TensorFlow（the pitfall of UPDATE_OPS)</title>
+      <link>https://bsun0802.github.io/blog/blog3/</link>
+      <pubDate>Sat, 12 May 2018 16:11:56 -0700</pubDate>
       
-      <guid>https://bsun0802.github.io/blog/blog1/</guid>
-      <description>Nulla fermentum blandit metus sit amet congue. Nunc hendrerit eleifend magna, quis posuere nulla eleifend eget. Pellentesque quis nulla eu massa facilisis sodales in quis urna. Vestibulum aliquam metus id risus volutpat iaculis. Sed malesuada nunc cursus risus consectetur suscipit. Quisque sit amet leo mattis, sagittis purus eu, tristique sapien. Vestibulum gravida dictum aliquam. Etiam magna neque, tempus et aliquet sed, sollicitudin sed tellus. Sed euismod, lorem eget aliquet ultrices, nisl eros hendrerit nunc, in gravida augue leo id diam.</description>
+      <guid>https://bsun0802.github.io/blog/blog3/</guid>
+      <description>Caution: this post is written in 2018 and maybe out-of-date!
+ Table of Contents      Batch Normalization layer in TensorFlow How to apply batch-normalization in TensorFlow The pitfall: UPDATE_OPS       Batch Normalization layer in TensorFlow In this post, I&amp;rsquo;m not going to explain the math behind what batch normalization does and why it could help if we apply batch-normalization in our deep networks.</description>
     </item>
     
   </channel>

@@ -17,7 +17,7 @@
     
     
 
-    <title>Bo Sun | Facebook AI | Secrets To ML – Even In This Down Economy</title>
+    <title>Bo Sun | Facebook AI | Create your own blog with Hugo in 5 minutes</title>
 
 
     
@@ -39,12 +39,12 @@
 
 
 <h3>
-    <a class="title" href="/blog/blog1/">Secrets To ML – Even In This Down Economy</a>
+    <a class="title" href="/blog/blog1/">Create your own blog with Hugo in 5 minutes</a>
 </h3>
 
 <div class="reading_time secondary_font text-muted ">
     <span>
-        May 18 2018 · 4 min read
+        May 18 2020 · 3 min read
     </span>
 
 </div>
@@ -54,18 +54,12 @@
 
 <div class="tags_navigation">
     
-    <a class="tag" href="/tags/ml/">#ml</a>
-    
-    <a class="tag" href="/tags/economy/">#economy</a>
-    
-    <a class="tag" href="/tags/machine-learning/">#machine-learning</a>
-    
-    <a class="tag" href="/tags/ai/">#ai</a>
+    <a class="tag" href="/tags/hugo/">#hugo</a>
     
 </div>
 
 
-<p>Nulla fermentum blandit metus sit amet congue. Nunc hendrerit eleifend magna, quis posuere nulla eleifend eget. Pellentesque quis nulla eu massa facilisis sodales in quis urna. Vestibulum aliquam metus id risus volutpat iaculis. Sed malesuada nunc cursus risus consectetur suscipit. Quisque sit amet leo mattis, sagittis purus eu, tristique sapien. Vestibulum gravida dictum aliquam. Etiam magna neque, tempus et aliquet sed, sollicitudin sed tellus. Sed euismod, lorem eget aliquet ultrices, nisl eros hendrerit nunc, in gravida augue leo id diam. Integer sed nisi laoreet, pretium turpis eu, tincidunt tellus. Sed at auctor est, eu consequat urna.</p>
+<p>Disclaimer: This blog was written in 2020, so Hugo may have changed. So you better cross-reference newer resources as well.</p>
 <div class="toc ">
     <div>
         <strong>Table of Contents</strong>
@@ -74,38 +68,81 @@
         
         <nav id="TableOfContents">
   <ul>
-    <li><a href="#header-i">Header <code>I</code></a>
+    <li><a href="#step-0-install-homebrew">Step <code>0</code>. Install Homebrew</a></li>
+    <li><a href="#step-1-install-hugo">Step <code>1</code>. Install Hugo</a></li>
+    <li><a href="#step-2-create-a-new-site">Step <code>2</code>. Create a new site</a></li>
+    <li><a href="#step-3-choose-a-theme">Step <code>3</code>. Choose a theme</a></li>
+    <li><a href="#step-4-start-writing">Step <code>4</code>. Start writing</a>
       <ul>
-        <li><a href="#header-2">Header 2</a>
+        <li>
           <ul>
-            <li><a href="#header-3">Header 3</a></li>
-            <li><a href="#header-4">Header 4</a></li>
+            <li></li>
           </ul>
         </li>
       </ul>
     </li>
-    <li><a href="#header-ii">Header <code>II</code></a></li>
+    <li><a href="#step-5-deploy-your-web-with-github-pages">Step <code>5</code> Deploy your web with GitHub Pages.</a>
+      <ul>
+        <li><a href="#references">References:</a></li>
+      </ul>
+    </li>
   </ul>
 </nav>
     </div>
 </div>
-<h1 id="header-i">Header <code>I</code></h1>
-<p>Nulla <code>fermentum blandit metus</code> sit amet congue. Nunc hendrerit eleifend magna, quis posuere nulla eleifend eget. Pellentesque quis nulla eu massa facilisis sodales in quis urna. Vestibulum aliquam metus id risus volutpat iaculis. Sed malesuada nunc cursus risus consectetur suscipit. Quisque sit amet leo mattis, sagittis purus eu, tristique sapien. Vestibulum gravida dictum aliquam. Etiam magna neque, tempus et aliquet sed, sollicitudin sed tellus. Sed euismod, lorem eget aliquet ultrices, nisl eros hendrerit nunc, in gravida augue leo id diam. Integer sed nisi laoreet, pretium turpis eu, tincidunt tellus. Sed at auctor est, eu consequat urna.</p>
-<h2 id="header-2">Header 2</h2>
-<p>Nulla fermentum blandit metus sit amet congue. Nunc hendrerit eleifend magna, quis posuere nulla eleifend eget. Pellentesque quis nulla eu massa facilisis sodales in quis urna. Vestibulum aliquam metus id risus volutpat iaculis. Sed malesuada nunc cursus risus consectetur suscipit. Quisque sit amet leo mattis, sagittis purus eu, tristique sapien. Vestibulum gravida dictum aliquam. Etiam magna neque, tempus et aliquet sed, sollicitudin sed tellus. Sed euismod, lorem eget aliquet ultrices, nisl eros hendrerit nunc, in gravida augue leo id diam. Integer sed nisi laoreet, pretium turpis eu, tincidunt tellus. Sed at auctor est, eu consequat urna.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
+<p><a href="https://gohugo.io">Hugo</a> is a framework for building websites, technically speaking, building static pages. You could build your own website with the only prerequisite of some <a href="https://www.learnenough.com/command-line-tutorial">command line</a> and start writing immediately with <a href="https://www.rstudio.com/wp-content/uploads/2015/02/rmarkdown-cheatsheet.pdf">markdown</a>.</p>
+<h1 id="step-0-install-homebrew">Step <code>0</code>. Install Homebrew</h1>
+<p>If you have a Mac but not using <a href="https://brew.sh">Homebrew</a>, you definitely have to try this package manager. And we will need it to install Hugo anyway.</p>
+<p>Use the following command to install Homebrew:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">&gt; /usr/bin/ruby -e <span style="color:#e6db74">&#34;</span><span style="color:#66d9ef">$(</span>curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install<span style="color:#66d9ef">)</span><span style="color:#e6db74">&#34;</span>
 
-<span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
-    println(<span style="color:#e6db74">&#34;Hello, World!&#34;</span>)
-}
-
-</code></pre></div><h3 id="header-3">Header 3</h3>
-<p>Nulla fermentum blandit metus sit amet congue. Nunc hendrerit eleifend magna, quis posuere nulla eleifend eget. Pellentesque quis nulla eu massa facilisis sodales in quis urna. Vestibulum aliquam metus id risus volutpat iaculis. Sed malesuada nunc cursus risus consectetur suscipit. Quisque sit amet leo mattis, sagittis purus eu, tristique sapien. Vestibulum gravida dictum aliquam. Etiam magna neque, tempus et aliquet sed, sollicitudin sed tellus. Sed euismod, lorem eget aliquet ultrices, nisl eros hendrerit nunc, in gravida augue leo id diam. Integer sed nisi laoreet, pretium turpis eu, tincidunt tellus. Sed at auctor est, eu consequat urna.</p>
-<h3 id="header-4">Header 4</h3>
-<p>Nulla <code>fermentum blandit metus</code> sit amet congue. Nunc hendrerit eleifend magna, quis posuere nulla eleifend eget. Pellentesque quis nulla eu massa facilisis sodales in quis urna. Vestibulum aliquam metus id risus volutpat iaculis. Sed malesuada nunc cursus risus consectetur suscipit. Quisque sit amet leo mattis, sagittis purus eu, tristique sapien. Vestibulum gravida dictum aliquam. Etiam magna neque, tempus et aliquet sed, sollicitudin sed tellus. Sed euismod, lorem eget aliquet ultrices, nisl eros hendrerit nunc, in gravida augue leo id diam. Integer sed nisi laoreet, pretium turpis eu, tincidunt tellus. Sed at auctor est, eu consequat urna.</p>
-<p>Nulla <code>fermentum blandit metus</code> sit amet congue. Nunc hendrerit eleifend magna, quis posuere nulla eleifend eget. Pellentesque quis nulla eu massa facilisis sodales in quis urna. Vestibulum aliquam metus id risus volutpat iaculis. Sed malesuada nunc cursus risus consectetur suscipit. Quisque sit amet leo mattis, sagittis purus eu, tristique sapien. Vestibulum gravida dictum aliquam. Etiam magna neque, tempus et aliquet sed, sollicitudin sed tellus. Sed euismod, lorem eget aliquet ultrices, nisl eros hendrerit nunc, in gravida augue leo id diam. Integer sed nisi laoreet, pretium turpis eu, tincidunt tellus. Sed at auctor est, eu consequat urna.</p>
-<h1 id="header-ii">Header <code>II</code></h1>
-<p>Nulla fermentum blandit metus sit amet congue. Nunc hendrerit eleifend magna, quis posuere nulla eleifend eget. Pellentesque quis nulla eu massa facilisis sodales in quis urna. Vestibulum aliquam metus id risus volutpat iaculis. Sed malesuada nunc cursus risus consectetur suscipit. Quisque sit amet leo mattis, sagittis purus eu, tristique sapien. Vestibulum gravida dictum aliquam. Etiam magna neque, tempus et aliquet sed, sollicitudin sed tellus. Sed euismod, lorem eget aliquet ultrices, nisl eros hendrerit nunc, in gravida augue leo id diam. Integer sed nisi laoreet, pretium turpis eu, tincidunt tellus. Sed at auctor est, eu consequat urna.</p>
+&gt; brew --version <span style="color:#75715e"># check installation</span>
+</code></pre></div><h1 id="step-1-install-hugo">Step <code>1</code>. Install Hugo</h1>
+<p>If you have installed Homebrew successfully, then you could have Hugo installed in one line:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">    &gt; brew install hugo
+    &gt; hugo help <span style="color:#75715e"># if this success, you are good to go!</span>
+</code></pre></div><p><strong>For users of other OS</strong>: If you are <strong>not</strong> using macOS, you need to check more complete instructions at <a href="https://gohugo.io/getting-started/installing/">Install Hugo</a>.</p>
+<h1 id="step-2-create-a-new-site">Step <code>2</code>. Create a new site</h1>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">&gt; hugo new site /@path/your-new-site
+</code></pre></div><p>The above will create a folder named <code>your-new-site</code> in your designated @path. And it will be the root of your newly created Hugo web application.</p>
+<h1 id="step-3-choose-a-theme">Step <code>3</code>. Choose a theme</h1>
+<p>Being one of the most popular open-source framework for building websites, Hugo has a large and responsive community producing cool themes. Complete list of available themes can be found <a href="https://themes.gohugo.io">here</a>.</p>
+<p>From the root of you Hugo site:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">    &gt; cd @your-new-site
+    &gt; git init
+    &gt; <span style="color:#75715e"># add as submodule your favorite theme into `themes/@your-theme`:</span>
+    &gt; git submodule add https://github.com/@author/@your-theme.git themes/@your-theme
+    &gt; <span style="color:#75715e"># example</span>
+    &gt; <span style="color:#75715e"># git submodule add https://github.com/budparr/gohugo-theme-ananke.git themes/ananke</span>
+    
+    &gt; <span style="color:#75715e"># Generate site files into public directory</span>
+    &gt; hugo -t @your-theme
+</code></pre></div><p>See also Hugo&rsquo;s <a href="https://blog.olowolo.com/post/hugo-quick-start/">Quick Start</a>.</p>
+<h1 id="step-4-start-writing">Step <code>4</code>. Start writing</h1>
+<p>Congratulations, your first blog post is only one stone&rsquo;s throw from here!</p>
+<h4 id="creating-posts">Creating Posts</h4>
+<p>It depends on the theme you use, but posts should generally go under a <code>content/blog</code> directory. Simply run:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">    &gt; hugo new blog/your-new-post.md
+</code></pre></div><p>the above will create <code>your-new-post.md</code> under <code>content/blog/</code>, as well as the <code>content/blog/</code> directory itself if not exist.</p>
+<p>For posts to be displayed on your site, you could do one of the following:</p>
+<ul>
+<li>add <code>draft = false</code> in the post’s <a href="https://gohugo.io/content-management/front-matter/#readout">front matter</a></li>
+<li>or use the <code>--buildDrafts</code> option when building</li>
+<li>or add <code>builddrafts = true</code> in <code>config.toml</code>.</li>
+</ul>
+<h4 id="creating-fixed-pages">Creating Fixed Pages</h4>
+<p>Fixed pages such as an About page should preferably go under <code>content/fixed</code> or be present at the root of the <code>content</code> directory(my preferable way).</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">    &gt; hugo new about.md
+</code></pre></div><p>The static pages you are going to build is genuinely text-based and the only tool you need to grab is the <a href="https://www.markdownguide.org">markdown</a> makeup language.</p>
+<h1 id="step-5-deploy-your-web-with-github-pages">Step <code>5</code> Deploy your web with GitHub Pages.</h1>
+<p>Now you have your websites tested out locally, it is time for you to deploy it online! You can check my <a href="https://bsun0802.github.io/blog/blog4/">post</a> on deploying HUGO website.</p>
+<p>Also, here is a nice blog post that show you how to <a href="https://www.mytechramblings.com/posts/create-a-website-with-hugo-and-gh/">deploy your HUGO website via GitHub Pages</a> and set up automatically deployment.</p>
+<h2 id="references">References:</h2>
+<ul>
+<li><a href="https://gohugo.io/documentation/">Hugo docs</a>.</li>
+<li><a href="http://www.gohugo.org/doc/tutorials/github-pages-blog/">Hugo 中文文档</a></li>
+<li><a href="https://blog.olowolo.com/post/hugo-quick-start/">Hugo 从入门到会用</a></li>
+</ul>
 
 
 <footer class="mt-auto d-flex justify-content-center text-muted small secondary_font">
