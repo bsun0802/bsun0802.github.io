@@ -94,36 +94,36 @@
 <h1 id="step-0-install-homebrew">Step <code>0</code>. Install Homebrew</h1>
 <p>If you have a Mac but not using <a href="https://brew.sh">Homebrew</a>, you definitely have to try this package manager. And we will need it to install Hugo anyway.</p>
 <p>Use the following command to install Homebrew:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">&gt; /usr/bin/ruby -e <span style="color:#e6db74">&#34;</span><span style="color:#66d9ef">$(</span>curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install<span style="color:#66d9ef">)</span><span style="color:#e6db74">&#34;</span>
-
-&gt; brew --version <span style="color:#75715e"># check installation</span>
-</code></pre></div><h1 id="step-1-install-hugo">Step <code>1</code>. Install Hugo</h1>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>&gt; /usr/bin/ruby -e <span style="color:#e6db74">&#34;</span><span style="color:#66d9ef">$(</span>curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install<span style="color:#66d9ef">)</span><span style="color:#e6db74">&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>&gt; brew --version <span style="color:#75715e"># check installation</span>
+</span></span></code></pre></div><h1 id="step-1-install-hugo">Step <code>1</code>. Install Hugo</h1>
 <p>If you have installed Homebrew successfully, then you could have Hugo installed in one line:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">    &gt; brew install hugo
-    &gt; hugo help <span style="color:#75715e"># if this success, you are good to go!</span>
-</code></pre></div><p><strong>For users of other OS</strong>: If you are <strong>not</strong> using macOS, you need to check more complete instructions at <a href="https://gohugo.io/getting-started/installing/">Install Hugo</a>.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>    &gt; brew install hugo
+</span></span><span style="display:flex;"><span>    &gt; hugo help <span style="color:#75715e"># if this success, you are good to go!</span>
+</span></span></code></pre></div><p><strong>For users of other OS</strong>: If you are <strong>not</strong> using macOS, you need to check more complete instructions at <a href="https://gohugo.io/getting-started/installing/">Install Hugo</a>.</p>
 <h1 id="step-2-create-a-new-site">Step <code>2</code>. Create a new site</h1>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">&gt; hugo new site /@path/your-new-site
-</code></pre></div><p>The above will create a folder named <code>your-new-site</code> in your designated @path. And it will be the root of your newly created Hugo web application.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>&gt; hugo new site /@path/your-new-site
+</span></span></code></pre></div><p>The above will create a folder named <code>your-new-site</code> in your designated @path. And it will be the root of your newly created Hugo web application.</p>
 <h1 id="step-3-choose-a-theme">Step <code>3</code>. Choose a theme</h1>
 <p>Being one of the most popular open-source framework for building websites, Hugo has a large and responsive community producing cool themes. Complete list of available themes can be found <a href="https://themes.gohugo.io">here</a>.</p>
 <p>From the root of you Hugo site:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">    &gt; cd @your-new-site
-    &gt; git init
-    &gt; <span style="color:#75715e"># add as submodule your favorite theme into `themes/@your-theme`:</span>
-    &gt; git submodule add https://github.com/@author/@your-theme.git themes/@your-theme
-    &gt; <span style="color:#75715e"># example</span>
-    &gt; <span style="color:#75715e"># git submodule add https://github.com/budparr/gohugo-theme-ananke.git themes/ananke</span>
-    
-    &gt; <span style="color:#75715e"># Generate site files into public directory</span>
-    &gt; hugo -t @your-theme
-</code></pre></div><p>See also Hugo&rsquo;s <a href="https://blog.olowolo.com/post/hugo-quick-start/">Quick Start</a>.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>    &gt; cd @your-new-site
+</span></span><span style="display:flex;"><span>    &gt; git init
+</span></span><span style="display:flex;"><span>    &gt; <span style="color:#75715e"># add as submodule your favorite theme into `themes/@your-theme`:</span>
+</span></span><span style="display:flex;"><span>    &gt; git submodule add https://github.com/@author/@your-theme.git themes/@your-theme
+</span></span><span style="display:flex;"><span>    &gt; <span style="color:#75715e"># example</span>
+</span></span><span style="display:flex;"><span>    &gt; <span style="color:#75715e"># git submodule add https://github.com/budparr/gohugo-theme-ananke.git themes/ananke</span>
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    &gt; <span style="color:#75715e"># Generate site files into public directory</span>
+</span></span><span style="display:flex;"><span>    &gt; hugo -t @your-theme
+</span></span></code></pre></div><p>See also Hugo&rsquo;s <a href="https://blog.olowolo.com/post/hugo-quick-start/">Quick Start</a>.</p>
 <h1 id="step-4-start-writing">Step <code>4</code>. Start writing</h1>
 <p>Congratulations, your first blog post is only one stone&rsquo;s throw from here!</p>
 <h4 id="creating-posts">Creating Posts</h4>
 <p>It depends on the theme you use, but posts should generally go under a <code>content/blog</code> directory. Simply run:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">    &gt; hugo new blog/your-new-post.md
-</code></pre></div><p>the above will create <code>your-new-post.md</code> under <code>content/blog/</code>, as well as the <code>content/blog/</code> directory itself if not exist.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>    &gt; hugo new blog/your-new-post.md
+</span></span></code></pre></div><p>the above will create <code>your-new-post.md</code> under <code>content/blog/</code>, as well as the <code>content/blog/</code> directory itself if not exist.</p>
 <p>For posts to be displayed on your site, you could do one of the following:</p>
 <ul>
 <li>add <code>draft = false</code> in the post’s <a href="https://gohugo.io/content-management/front-matter/#readout">front matter</a></li>
@@ -132,8 +132,8 @@
 </ul>
 <h4 id="creating-fixed-pages">Creating Fixed Pages</h4>
 <p>Fixed pages such as an About page should preferably go under <code>content/fixed</code> or be present at the root of the <code>content</code> directory(my preferable way).</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">    &gt; hugo new about.md
-</code></pre></div><p>The static pages you are going to build is genuinely text-based and the only tool you need to grab is the <a href="https://www.markdownguide.org">markdown</a> makeup language.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>    &gt; hugo new about.md
+</span></span></code></pre></div><p>The static pages you are going to build is genuinely text-based and the only tool you need to grab is the <a href="https://www.markdownguide.org">markdown</a> makeup language.</p>
 <h1 id="step-5-deploy-your-web-with-github-pages">Step <code>5</code> Deploy your web with GitHub Pages.</h1>
 <p>Now you have your websites tested out locally, it is time for you to deploy it online! You can check my <a href="https://bsun0802.github.io/blog/blog4/">post</a> on deploying HUGO website.</p>
 <p>Also, here is a nice blog post that show you how to <a href="https://www.mytechramblings.com/posts/create-a-website-with-hugo-and-gh/">deploy your HUGO website via GitHub Pages</a> and set up automatically deployment.</p>
@@ -146,7 +146,7 @@
 
 
 <footer class="mt-auto d-flex justify-content-center text-muted small secondary_font">
-    <span class="text-muted">Copyright (c) 2021, Bo Sun,
+    <span class="text-muted">Copyright (c) 2022, Bo Sun,
         <a class="text-muted" href="https://github.com/hadisinaee/avicenna" target="_blank"> created by Avicenna
             (MIT)</a>
     </span>

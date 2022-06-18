@@ -13,7 +13,7 @@
       <pubDate>Fri, 11 Sep 2020 16:12:29 -0700</pubDate>
       
       <guid>https://bsun0802.github.io/blog/blog4/</guid>
-      <description>Table of Contents    I Deploy on Netlify  Steps   II Deploy on GitHub Pages  Let&amp;rsquo;s get Started! Don&amp;rsquo;t Make a gh-pages Branch A Tale of Two Repositories  1. Setup When Nothing is Committed(select one of this two) 2. Setup When You&amp;rsquo;ve Already Committed and Pushed(select one of this two) Adding the Submodule Deploying Make the whole deploying-procedure a shell script   Mapping a Custom Domain Regenerating All the URLS       I Deploy on Netlify Steps Deploy your HUGO website on Netlify is astonishingly easy, if you are a beginner, it is recommended to use this approach.</description>
+      <description>Table of Contents I Deploy on Netlify Steps II Deploy on GitHub Pages Let&amp;rsquo;s get Started! Don&amp;rsquo;t Make a gh-pages Branch A Tale of Two Repositories 1. Setup When Nothing is Committed(select one of this two) 2. Setup When You&amp;rsquo;ve Already Committed and Pushed(select one of this two) Adding the Submodule Deploying Make the whole deploying-procedure a shell script Mapping a Custom Domain Regenerating All the URLS I Deploy on Netlify Steps Deploy your HUGO website on Netlify is astonishingly easy, if you are a beginner, it is recommended to use this approach.</description>
     </item>
     
   </channel>

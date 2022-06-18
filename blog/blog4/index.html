@@ -190,7 +190,7 @@ $ git push origin master
 <h3 id="make-the-whole-deploying-procedure-a-shell-script">Make the whole deploying-procedure a shell script</h3>
 <pre tabindex="0"><code>#!/bin/bash
 
-echo -e &quot;\033[0;32mDeploying updates to GitHub...\033[0m&quot;
+echo -e &#34;\033[0;32mDeploying updates to GitHub...\033[0m&#34;
 
 # Build the project.
 hugo -t cocoa-eh # if using a theme, replace with `hugo -t &lt;YOURTHEME&gt;`
@@ -201,11 +201,11 @@ cd public
 git add .
 
 # Commit changes.
-msg=&quot;rebuilding site `date`&quot;
+msg=&#34;rebuilding site `date`&#34;
 if [ $# -eq 1 ]
-  then msg=&quot;$1&quot;
+  then msg=&#34;$1&#34;
 fi
-git commit -m &quot;$msg&quot;
+git commit -m &#34;$msg&#34;
 
 # Push source and build repos.
 git push origin master
@@ -228,7 +228,7 @@ file, regenerate the site with the correct urls, and redeploy.</p>
 
 
 <footer class="mt-auto d-flex justify-content-center text-muted small secondary_font">
-    <span class="text-muted">Copyright (c) 2021, Bo Sun,
+    <span class="text-muted">Copyright (c) 2022, Bo Sun,
         <a class="text-muted" href="https://github.com/hadisinaee/avicenna" target="_blank"> created by Avicenna
             (MIT)</a>
     </span>

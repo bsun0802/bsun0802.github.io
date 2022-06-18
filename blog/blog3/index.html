@@ -93,17 +93,17 @@
 <p>You might be confused that, after applying the batch-normalization layer, your network performs properly in training, maybe even achieve higher training accuracy, but the validation accuracy drops significantly for no reason.</p>
 <p>This is because in TensorFlow, the moving mean and moving variance need to be updated manually. It is clearly stated in a blue box in the documentation here<a href="https://www.tensorflow.org/api_docs/python/tf/layers/batch_normalization"><code>tf.layers.batch_normalization</code></a>. But it is common for beginners to overlook those because the ease and homogeneity of applying other layers in TensorFlow.</p>
 <p>So when define <code>train_op</code> if you used batch-normalization, you need to create the dependency of <code>UPDATE_OPS</code> on your <code>train_op</code> like following:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">  x_norm <span style="color:#f92672">=</span> tf<span style="color:#f92672">.</span>layers<span style="color:#f92672">.</span>batch_normalization(x, training<span style="color:#f92672">=</span>training)
-  
-  <span style="color:#75715e"># ...</span>
-
-  update_ops <span style="color:#f92672">=</span> tf<span style="color:#f92672">.</span>get_collection(tf<span style="color:#f92672">.</span>GraphKeys<span style="color:#f92672">.</span>UPDATE_OPS)
-  <span style="color:#66d9ef">with</span> tf<span style="color:#f92672">.</span>control_dependencies(update_ops):
-    train_op <span style="color:#f92672">=</span> optimizer<span style="color:#f92672">.</span>minimize(loss)
-</code></pre></div>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>  x_norm <span style="color:#f92672">=</span> tf<span style="color:#f92672">.</span>layers<span style="color:#f92672">.</span>batch_normalization(x, training<span style="color:#f92672">=</span>training)
+</span></span><span style="display:flex;"><span>  
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e"># ...</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  update_ops <span style="color:#f92672">=</span> tf<span style="color:#f92672">.</span>get_collection(tf<span style="color:#f92672">.</span>GraphKeys<span style="color:#f92672">.</span>UPDATE_OPS)
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">with</span> tf<span style="color:#f92672">.</span>control_dependencies(update_ops):
+</span></span><span style="display:flex;"><span>    train_op <span style="color:#f92672">=</span> optimizer<span style="color:#f92672">.</span>minimize(loss)
+</span></span></code></pre></div>
 
 <footer class="mt-auto d-flex justify-content-center text-muted small secondary_font">
-    <span class="text-muted">Copyright (c) 2021, Bo Sun,
+    <span class="text-muted">Copyright (c) 2022, Bo Sun,
         <a class="text-muted" href="https://github.com/hadisinaee/avicenna" target="_blank"> created by Avicenna
             (MIT)</a>
     </span>
