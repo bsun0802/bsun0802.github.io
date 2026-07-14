@@ -1,20 +1,37 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>github on Bo Sun | Facebook AI</title>
-    <link>https://bsun0802.github.io/tags/github/</link>
-    <description>Recent content in github on Bo Sun | Facebook AI</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <lastBuildDate>Fri, 11 Sep 2020 16:12:29 -0700</lastBuildDate><atom:link href="https://bsun0802.github.io/tags/github/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Deploy your Hugo sites on Github Pages</title>
-      <link>https://bsun0802.github.io/blog/blog4/</link>
-      <pubDate>Fri, 11 Sep 2020 16:12:29 -0700</pubDate>
-      
-      <guid>https://bsun0802.github.io/blog/blog4/</guid>
-      <description>Table of Contents I Deploy on Netlify Steps II Deploy on GitHub Pages Let&amp;rsquo;s get Started! Don&amp;rsquo;t Make a gh-pages Branch A Tale of Two Repositories 1. Setup When Nothing is Committed(select one of this two) 2. Setup When You&amp;rsquo;ve Already Committed and Pushed(select one of this two) Adding the Submodule Deploying Make the whole deploying-procedure a shell script Mapping a Custom Domain Regenerating All the URLS I Deploy on Netlify Steps Deploy your HUGO website on Netlify is astonishingly easy, if you are a beginner, it is recommended to use this approach.</description>
-    </item>
-    
-  </channel>
-</rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Github on Bo Sun | Meta Superintelligence Lab</title><link>https://bsun0802.github.io/tags/github/</link><description>Recent content in Github on Bo Sun | Meta Superintelligence Lab</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Fri, 11 Sep 2020 16:12:29 -0700</lastBuildDate><atom:link href="https://bsun0802.github.io/tags/github/index.xml" rel="self" type="application/rss+xml"/><item><title>Deploy your Hugo sites on Github Pages</title><link>https://bsun0802.github.io/blog/blog4/</link><pubDate>Fri, 11 Sep 2020 16:12:29 -0700</pubDate><guid>https://bsun0802.github.io/blog/blog4/</guid><description>&lt;div class="toc "&gt;
+ &lt;div&gt;
+ &lt;strong&gt;Table of Contents&lt;/strong&gt;
+ &lt;/div&gt;
+ &lt;div&gt;
+ 
+ &lt;nav id="TableOfContents"&gt;
+ &lt;ul&gt;
+ &lt;li&gt;&lt;a href="#i-deploy-on-netlify"&gt;&lt;code&gt;I&lt;/code&gt; Deploy on Netlify&lt;/a&gt;
+ &lt;ul&gt;
+ &lt;li&gt;&lt;a href="#steps"&gt;Steps&lt;/a&gt;&lt;/li&gt;
+ &lt;/ul&gt;
+ &lt;/li&gt;
+ &lt;li&gt;&lt;a href="#ii-deploy-on-github-pages"&gt;&lt;code&gt;II&lt;/code&gt; Deploy on GitHub Pages&lt;/a&gt;
+ &lt;ul&gt;
+ &lt;li&gt;&lt;a href="#lets-get-started"&gt;Let&amp;rsquo;s get Started!&lt;/a&gt;&lt;/li&gt;
+ &lt;li&gt;&lt;a href="#dont-make-a-gh-pages-branch"&gt;Don’t Make a &lt;code&gt;gh-pages&lt;/code&gt; Branch&lt;/a&gt;&lt;/li&gt;
+ &lt;li&gt;&lt;a href="#a-tale-of-two-repositories"&gt;A Tale of Two Repositories&lt;/a&gt;
+ &lt;ul&gt;
+ &lt;li&gt;&lt;a href="#1-setup-when-nothing-is-committedselect-one-of-this-two"&gt;1. Setup When Nothing is Committed(select one of this two)&lt;/a&gt;&lt;/li&gt;
+ &lt;li&gt;&lt;a href="#2-setup-when-youve-already-committed-and-pushedselect-one-of-this-two"&gt;2. Setup When You&amp;rsquo;ve Already Committed and Pushed(select one of this two)&lt;/a&gt;&lt;/li&gt;
+ &lt;li&gt;&lt;a href="#adding-the-submodule"&gt;Adding the Submodule&lt;/a&gt;&lt;/li&gt;
+ &lt;li&gt;&lt;a href="#deploying"&gt;Deploying&lt;/a&gt;&lt;/li&gt;
+ &lt;li&gt;&lt;a href="#make-the-whole-deploying-procedure-a-shell-script"&gt;Make the whole deploying-procedure a shell script&lt;/a&gt;&lt;/li&gt;
+ &lt;/ul&gt;
+ &lt;/li&gt;
+ &lt;li&gt;&lt;a href="#mapping-a-custom-domain"&gt;Mapping a Custom Domain&lt;/a&gt;&lt;/li&gt;
+ &lt;li&gt;&lt;a href="#regenerating-all-the-urls"&gt;Regenerating All the URLS&lt;/a&gt;&lt;/li&gt;
+ &lt;/ul&gt;
+ &lt;/li&gt;
+ &lt;/ul&gt;
+&lt;/nav&gt;
+ &lt;/div&gt;
+&lt;/div&gt;
+&lt;h1 id="i-deploy-on-netlify"&gt;&lt;code&gt;I&lt;/code&gt; Deploy on Netlify&lt;/h1&gt;
+&lt;h2 id="steps"&gt;Steps&lt;/h2&gt;
+&lt;p&gt;Deploy your HUGO website on Netlify is astonishingly easy, if you are a beginner, it is recommended to use this approach.&lt;/p&gt;</description></item></channel></rss>

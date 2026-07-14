@@ -1,22 +1,23 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>ai on Bo Sun | Facebook AI</title>
-    <link>https://bsun0802.github.io/tags/ai/</link>
-    <description>Recent content in ai on Bo Sun | Facebook AI</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <lastBuildDate>Sat, 12 May 2018 16:11:56 -0700</lastBuildDate><atom:link href="https://bsun0802.github.io/tags/ai/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>How to correctly apply Batch Normalization layer in TensorFlow（the pitfall of UPDATE_OPS)</title>
-      <link>https://bsun0802.github.io/blog/blog3/</link>
-      <pubDate>Sat, 12 May 2018 16:11:56 -0700</pubDate>
-      
-      <guid>https://bsun0802.github.io/blog/blog3/</guid>
-      <description>Caution: this post is written in 2018 and maybe out-of-date!
-Table of Contents Batch Normalization layer in TensorFlow How to apply batch-normalization in TensorFlow The pitfall: UPDATE_OPS Batch Normalization layer in TensorFlow In this post, I&amp;rsquo;m not going to explain the math behind what batch normalization does and why it could help if we apply batch-normalization in our deep networks.
-For a quick look of what batch normalization is, check this post.</description>
-    </item>
-    
-  </channel>
-</rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Ai on Bo Sun | Meta Superintelligence Lab</title><link>https://bsun0802.github.io/tags/ai/</link><description>Recent content in Ai on Bo Sun | Meta Superintelligence Lab</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Sat, 12 May 2018 16:11:56 -0700</lastBuildDate><atom:link href="https://bsun0802.github.io/tags/ai/index.xml" rel="self" type="application/rss+xml"/><item><title>How to correctly apply Batch Normalization layer in TensorFlow（the pitfall of UPDATE_OPS)</title><link>https://bsun0802.github.io/blog/blog3/</link><pubDate>Sat, 12 May 2018 16:11:56 -0700</pubDate><guid>https://bsun0802.github.io/blog/blog3/</guid><description>&lt;p&gt;&lt;strong&gt;Caution: this post is written in 2018 and maybe out-of-date!&lt;/strong&gt;&lt;/p&gt;
+&lt;div class="toc "&gt;
+ &lt;div&gt;
+ &lt;strong&gt;Table of Contents&lt;/strong&gt;
+ &lt;/div&gt;
+ &lt;div&gt;
+ 
+ &lt;nav id="TableOfContents"&gt;
+ &lt;ul&gt;
+ &lt;li&gt;
+ &lt;ul&gt;
+ &lt;li&gt;&lt;a href="#batch-normalization-layer-in-tensorflow"&gt;Batch Normalization layer in TensorFlow&lt;/a&gt;&lt;/li&gt;
+ &lt;li&gt;&lt;a href="#how-to-apply-batch-normalization-in-tensorflow"&gt;How to apply batch-normalization in TensorFlow&lt;/a&gt;&lt;/li&gt;
+ &lt;li&gt;&lt;a href="#the-pitfall-update_ops"&gt;The pitfall: UPDATE_OPS&lt;/a&gt;&lt;/li&gt;
+ &lt;/ul&gt;
+ &lt;/li&gt;
+ &lt;/ul&gt;
+&lt;/nav&gt;
+ &lt;/div&gt;
+&lt;/div&gt;
+&lt;h2 id="batch-normalization-layer-in-tensorflow"&gt;Batch Normalization layer in TensorFlow&lt;/h2&gt;
+&lt;p&gt;In this post, I&amp;rsquo;m not going to explain the math behind what batch normalization does and why it could help if we apply batch-normalization in our deep networks.&lt;/p&gt;
+&lt;p&gt;For a quick look of what batch normalization is, check this &lt;a href="https://towardsdatascience.com/batch-normalization-theory-and-how-to-use-it-with-tensorflow-1892ca0173ad"&gt;post&lt;/a&gt;.&lt;/p&gt;</description></item></channel></rss>
